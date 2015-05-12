@@ -1,21 +1,18 @@
 html,body{
  margin: 0px;
+ background-color: white;
+ *{
+   font-family: 'Raleway';
+   font-weight: normal;
+   }
+
 
 }
 
 html {
-  background-color: #1a1a1a;
-  color: #000;
   overflown-x: hidden;
+  background-color: white;
 }
-
-
-
-#section1 {background-color:#f00;}
-#section2 {background-color:#0f0;}
-#section3 {background-color:#00f;}
-
-
 
 .pane {
   display: table;
@@ -38,26 +35,14 @@ html {
   box-shadow: 0.25rem 0.25rem 0.3125rem rgba(0,0,0,0.5);
 }
 
-
-
 #section1 {
   background-image:url(./images/user/slider-img/McMacular-homepage.jpg);
   background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
   position: relative;
 
   height: 100vh;
-}
-
-.header{
-  position: absolute;
-  top: 50%;
-  text-align: center;
-  width: 100%;
-  color: black;
-  -ms-transform: translate(0,-50%); /* IE 9 */
-    -webkit-transform: translate(0,-50%); /* Safari */
-    transform: translate(0,-50%);
-
 }
 
 #section2 {
@@ -65,5 +50,45 @@ html {
   text-align: center;
   width: 100%;
   margin: 0px auto;
+}
 
+#section2 h2 {
+  font-weight: 100;
+}
+#section2 h3 {
+  font-weight: 300;
+}
+
+#section2 img {
+  width: 80%;
+}
+
+
+//Section 3 carousel
+
+.carousel-control {
+  position: inherit;
+}
+
+.carousel-control.left {
+  margin: 40px;
+
+}
+.carousel-control.right {
+  margin: 40px;
+
+}
+
+blockquote {
+  border-left: 0px;
+}
+//Section 3 carousel
+
+#section3 h4 {
+  font-weight: 200;
+}
+
+h2.step  {
+  color: #eb5b5b;
+  font-size: 18px;
 }
