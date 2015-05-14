@@ -21,17 +21,25 @@ html(lang='en', ng-app='angular-prototype')
       .row
         .col-xs-12
           div(ui-view)
-
+    
+    
+    include ./views/general/footer
+    
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/vendor/angular/angular.js')
     script(src='/vendor/angular-messages/angular-messages.js')
     script(src='/vendor/angular-ui-router/release/angular-ui-router.js')
     script(src='/vendor/angular-animate/angular-animate.min.js') 
-    script(src='/vendor/angular-touch/angular-touch.min.js')  
+    script(src='/vendor/angular-touch/angular-touch.min.js')
+    script(src='/vendor/angular-scroll/angular-scroll.min.js') 
     script(src='/vendor/lodash/lodash.js')
     script(src='/vendor/moment/moment.js')
     script(src='/vendor/bootstrap/dist/js/bootstrap.min.js')
-        
+    script(src='/vendor/ng-parallax/angular-parallax.min.js')
+    script(src='/vendor/Parallax-ImageScroll/jquery.imageScroll.min.js')  
+    script(src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript")
+    script(src='/vendor/parallax/imageScroll.js')
+    
     script(src='/index.js')
     
       
