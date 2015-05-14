@@ -1,3 +1,226 @@
-body{
-  background-color: gray;
+html,body{
+ margin: 0px;
+ background-color: white;
+ *{
+   font-family: 'Raleway';
+   font-weight: normal;
+   }
 }
+
+html {
+  overflown-x: hidden;
+  background-color: white;
+}
+
+.pane {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 1.25rem;
+  margin: 0;
+}
+
+.wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+  padding: 5rem 0;
+  font-size: 1.125rem;
+  text-align: center;
+
+  // -webkit-box-shadow: 0.25rem 0.25rem 0.3125rem rgba(0,0,0,0.5);
+  // box-shadow: 0.25rem 0.25rem 0.3125rem rgba(0,0,0,0.5);
+}
+
+#section1 {
+  background-image:url(./images/user/slider-img/McMacular-homepage.jpg);
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  position: relative;
+
+  height: 100vh;
+}
+
+#section2 {
+  padding: 100px 50px;
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+}
+
+#section2 h2 {
+  font-weight: 100;
+}
+#section2 h3 {
+  font-weight: 300;
+}
+
+#section2 img {
+  width: 80%;
+}
+
+
+//Section 3 carousel
+
+.carousel-control {
+  position: inherit;
+}
+
+.carousel-control.left {
+  margin: 40px;
+
+}
+.carousel-control.right {
+  margin: 40px;
+
+}
+
+.col-md-offset-2 {
+  margin-left: 24.6%;
+}
+
+blockquote {
+  border-left: 0px;
+}
+//Section 3 carousel
+
+#section3 h4 {
+  font-weight: 200;
+}
+
+h2.step  {
+  color: #eb5b5b;
+  font-size: 18px;
+}
+
+//Gallery css
+
+img.slidee {
+  height: 150%;
+}
+
+.arrow {
+    cursor: pointer;
+    display: block;
+    height: 64px;
+    margin-top: -35px;
+    outline: medium none;
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    z-index: 5;
+}
+.arrow.prev {
+    background-image: url("./images/arrow-left.png");
+
+    left: 20px;
+    opacity: 0.2;
+    transition: all 0.2s linear 0s;
+}
+.arrow.next {
+    background-image: url("./images/arrow-right.png");
+    opacity: 0.2;
+    right: 20px;
+    transition: all 0.2s linear 0s;
+}
+.arrow.prev:hover{
+    opacity:1;
+}
+.arrow.next:hover{
+    opacity:1;
+}
+
+.navi {
+    display: block;
+    height: 48px;
+    left: -300x;
+    margin: 0 auto;
+    padding: 1em 0 0.8em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 300%;
+    z-index: 5;
+}
+.navi li {
+    border: 5px solid #AAAAAA;
+    border-radius: 5px;
+    cursor: pointer;
+    display: table;
+    height: 30px;
+    margin: 0 8px;
+    position: relative;
+    width: 70px;
+}
+.navi li.active {
+    border: 5px solid #FFFFFF;
+}
+.navi li img {
+    width: 140%;
+}
+
+.slideer {
+    // border: 15px solid #FFFFFF;
+    // border-radius: 5px;
+    height: 500px;
+    margin: 20px auto;
+    top: -20px;
+    position: relative;
+    width: 800px;
+
+
+
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.slidee {
+    position: absolute;
+    left: 0;
+}
+.slidee.ng-hide-add {
+    opacity:1;
+
+    -webkit-transition:2s linear all;
+    -moz-transition:2s linear all;
+    -o-transition:2s linear all;
+    transition:2s linear all;
+
+    -webkit-transform: rotateX(50deg) rotateY(30deg);
+    -moz-transform: rotateX(50deg) rotateY(30deg);
+    -ms-transform: rotateX(50deg) rotateY(30deg);
+    -o-transform: rotateX(50deg) rotateY(30deg);
+    transform: rotateX(50deg) rotateY(30deg);
+
+    -webkit-transform-origin: right top 0;
+    -moz-transform-origin: right top 0;
+    -ms-transform-origin: right top 0;
+    -o-transform-origin: right top 0;
+    transform-origin: right top 0;
+}
+.slidee.ng-hide-add.ng-hide-add-active {
+    opacity:0;
+}
+.slidee.ng-hide-remove {
+    -webkit-transition:2s linear all;
+    -moz-transition:2s linear all;
+    -o-transition:2s linear all;
+    transition:2s linear all;
+
+    display:block!important;
+    opacity:0;
+}
+.slidee, .slidee.ng-hide-remove.ng-hide-remove-active {
+    opacity:1;
+}
+//Gallery css

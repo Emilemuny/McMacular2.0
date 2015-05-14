@@ -6,7 +6,13 @@ module.exports = [
     options: {
       reporters: [{
         reporter: require('good-console'),
-        args: [{log: '*', response: '*', error: '*'}]
+        events: {
+          request: '*',
+          log: '*',
+          response: '*',
+          error: '*'
+        },
+        
       }]
     }
   },
