@@ -8,7 +8,7 @@ nav.navbar.navbar-default(ng-controller='NavCtrl')
         span.icon-bar
         span.icon-bar
       //- a.navbar-brand(href='#') Brand
-      img.navbar-brand(href='#', src='../../images/McMacular_Logo.jpg', style='width: 30% height: 30%')
+      a(ui-sref='home'): img.navbar-brand(src='../../images/McMacular_Logo.jpg', style='width: 30% height: 30%')
     // Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav

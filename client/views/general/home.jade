@@ -4,32 +4,29 @@ div(ui-view)
       section#section1.pane.homepage
         .wrapper
           include ./sections/section1
-          a( class="next", href="#section2" ) NEXT
       section#section2.pane.productdetails
         .wrapper
           include ./sections/section2
-          a( class="next", href="#section3" ) NEXT
       
       .img-holder(data-image='../../images/user/product-images/golden-gate-background.jpg', data-image-mobile='../../images/user/product-images/golden-gate-background.jpg', data-width='1600', data-height='900')
       
       section#section3.pane.howitworks_reviews
         .wrapper
           include ./sections/section3
-          a( class="next", href="#section4" ) NEXT
       
       .img-holder(data-image='../../images/user/product-images/McMacular_3.jpg', data-image-mobile='../../images/user/product-images/McMacular_3.jpg', data-width='1600', data-height='900')
       
       section#section4.pane.reserve
         .wrapper
           include ./sections/section4
-          a( class="next", href="#section5" ) NEXT
           
       .img-holder(data-image='../../images/user/product-images/cable_car.jpg', data-image-mobile='../../images/user/product-images/cable_car.jpg')
-      
       section#section5.pane.contactus
         .wrapper
           include ./sections/section5
-          a( class="next", href="#section1" ) NEXT
+      include ../../views/general/footer
+
+    
     script.
       var touch = Modernizr.touch;
       $('.img-holder').imageScroll({
