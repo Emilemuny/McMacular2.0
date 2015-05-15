@@ -12,6 +12,7 @@ angular.module('mcmacular-app')
 
     $scope.authenticate = function(provider){
       $auth.authenticate(provider)
+
       .then(login);
     };
 

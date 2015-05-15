@@ -17,9 +17,9 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
       $authProvider.twitter({url: '/auth/twitter'});
       $authProvider.oauth2({
         name: 'instagram',
-        url: 'http://localhost:3333/auth/instagram',
-        redirectUri: 'http://localhost:3333',
-        clientId: '84bfc810b1da4d31b678b2b528802a8d',
+        url: '/auth/instagram',
+        redirectUri: 'http://localhost:3000',
+        clientId: '16f7a019eb1240ea9e845c1b3b1ef86f',
         requiredUrlParams: ['scope'],
         scope: ['basic'],
         scopeDelimiter: '+',
