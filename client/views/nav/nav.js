@@ -7,4 +7,5 @@ angular.module('angular-prototype')
         delete $rootScope.email;
       });
     };
+
   }]);
