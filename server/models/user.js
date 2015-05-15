@@ -32,7 +32,7 @@ userSchema.statics.preTwitter = function(cb){
   let requestTokenOauth = {
     consumer_key: process.env.TWITTER_CONSUMER_KEY,
     consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-    callback: 'http://127.0.0.1:3333'
+    callback: 'http://localhost:3000'
   };
 
     Request.post({url:requestTokenUrl, oauth:requestTokenOauth}, (err, response, body)=>{
