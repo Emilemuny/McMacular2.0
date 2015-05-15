@@ -37,7 +37,7 @@ nav.navbar.navbar-default(ng-controller='NavCtrl')
       ul.nav.navbar-nav.navbar-right(ng-show='user')      
         li.dropdown
           a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
-            | {{user.email}} 
+            | {{user.email || user.displayName}} 
             span.caret
           ul.dropdown-menu(role='menu')
             li

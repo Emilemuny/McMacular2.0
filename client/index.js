@@ -12,7 +12,7 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
       .state('register', {url:'/register', templateUrl:'/views/users/users.html', controller:'UsersCtrl'})
       .state('login', {url:'/login', templateUrl:'/views/users/users.html', controller:'UsersCtrl'});
 
-      $authProvider.facebook({clientId: '1418892481739742'});
+      $authProvider.facebook({clientId: '401463520025702'});   
       $authProvider.google({clientId: '762244371848-ttjag02m7npn6331djjp991t19dcgk81@developer.gserviceaccount.com'});
       $authProvider.twitter({url: '/auth/twitter'});
       $authProvider.oauth2({
