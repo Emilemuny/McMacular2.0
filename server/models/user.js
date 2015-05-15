@@ -82,7 +82,7 @@ userSchema.statics.google = function(payload, cb) {
   let params = {
     code: payload.code,
     client_id: payload.clientId,
-    redirect_uri: 'http://localhost:3333',
+    redirect_uri: 'http://localhost:3000',
     client_secret: process.env.GOOGLE_SECRET,
     grant_type: 'authorization_code'
   };
