@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('angular-prototype')
+angular.module('mcmacular-app')
   .controller('ScrollCtrl', ['$scope', '$document', function($scope, $document){
     $scope.toTheTop = function() {
       $document.scrollTopAnimated(0, 5000).then(function() {
-        console && console.log('You just scrolled to the top!');
+        console.log('You just scrolled to the top!');
       });
     };
     var section3 = angular.element(document.getElementById('#section3'));

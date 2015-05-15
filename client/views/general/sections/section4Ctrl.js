@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-prototype')
+angular.module('mcmacular-app')
  .controller('sectionfourCtrl', ['$scope', function($scope){
 
    $scope.photos = [

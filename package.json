@@ -24,7 +24,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node server/index.js",
-    "localhost": "MONGO_URL=mongodb://localhost/McMacular2-prod PORT=3333 nodemon -e js,jade server/index.js",
+    "localhost": "MONGO_URL=mongodb://localhost/McMacular2-prod PORT=3000 nodemon -e js,jade server/index.js",
     "preinstall": "rm -rf node_modules public",
     "postinstall": "bower install && gulp build",
     "test": "MONGO_URL=mongodb://localhost/McMacular2-test lab -l -v -m 5000 test/unit test/acceptance"
@@ -38,8 +38,11 @@
     "good-console": "^5.0.0",
     "hapi": "^8.4.0",
     "hapi-auth-cookie": "^2.2.0",
+    "hapi-auth-jwt": "^2.1.2",
     "joi": "^6.4.1",
+    "jwt-simple": "^0.3.0",
     "lodash": "^3.8.0",
+    "moment": "^2.10.3",
     "mongoose": "^4.0.2",
     "request": "^2.55.0"
   },

@@ -17,4 +17,10 @@ h1 {{name}}
         input#password1.form-control(type='password', name='password', ng-model='user.password')
       .form-group
         button.btn.btn-default(type='submit', ng-click='submit(user)') {{name}}
+        h5 You can also {{name}} with your social account! 
+      .form-group
+        button.btn.btn-default(ng-click='authenticate("instagram")'): i.fa.fa-instagram  Instagram    
+        button.btn.btn-default(ng-click='authenticate("facebook")'): i.fa.fa-facebook  Facebook
+        button.btn.btn-default(ng-click='authenticate("google")'): i.fa.fa-google-plus  Google 
+        button.btn.btn-default(ng-click='authenticate("twitter")'): i.fa.fa-twitter  Twitter  
   .col-xs-8

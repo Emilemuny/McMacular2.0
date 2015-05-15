@@ -12,11 +12,11 @@ module.exports = [
           response: '*',
           error: '*'
         },
-        
+
       }]
     }
   },
   {
-    register: require('hapi-auth-cookie')
+    register: require('hapi-auth-jwt')
   }
 ];
