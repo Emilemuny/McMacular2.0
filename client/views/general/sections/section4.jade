@@ -1,5 +1,5 @@
 .container
-  .col-md-6(ng-controller='sectionfourCtrl')
+  .col-md-6(ng-controller='imagegalleryCtrl')
     .row
       .col-md-4
         .container.slideer
@@ -10,17 +10,46 @@
         ul.navi
           li(ng-repeat='photo in photos', ng-class="{'active':isActive($index)}")
             img.gallery(src='{{photo.src}}', alt='{{photo.desc}}', title='{{photo.desc}}', ng-click='showPhoto($index);')  
-  .col-md-6
-    h1 Pants size SPACE HERE!
-  
+  .col-md-6(ng-controller='reservenowCtrl')
+    .row
+      h1 McMacular 2.0
+      h3  - Champange collection -
+      h2  $ 271
+    .row
+      h2 Progress Bar here....
+    .row
+      .accordion__container
+        .accordion__tab
+          .accordion__tab-title(ng-click="openTab('tab one')")
+            a: h4(ng-model='activeItem')
+              | {{activeItem}}
+          .accordion__tab-content(ng-show="isOpenTab('tab one')") 
+            .row(ng-repeat='fit in fits',selectable='setActiveItem(fit)', ng-click="closeTab('tab one')")
+              a: h4 {{fit}}
+        .accordion__tab
+          .accordion__tab-title(ng-click="openTab('tab two')", ng-model='activeItem' )
+            a: h4
+              | Size {{activesizewaist}}  {{activesizelen}}
+          .accordion__tab-content.size(ng-show="isOpenTab('tab two')")
+            .row.title 
+              h5 WAIST
+            #boxwaist(ng-repeat='sizew in sizees.waist', selectable='setActiveItemsizew(sizew)', ng-click="closeTab('tab one')") 
+              a: h5 {{sizew}}
+            .row.title 
+              h5 LENGTH
+            #boxlengthh(ng-repeat='sizel in sizees.lengthh', selectable='setActiveItemsizel(sizel)', ng-click="closeTab('tab one')")
+              a: h5 {{sizel}}
+        .accordion__tab
+           button.btn.btn(ng-click='reservenow()'): h4 Reserve Now
+           a.btn.btn.danger(ng-show='errorsizefit'): {{errorsizefit}}       
+           
+           
+        
+                     
+              
+                
+            
+            
+            
+        
     
-    
-    
-    
-    
-    
-    
-      
-  
-  
-  

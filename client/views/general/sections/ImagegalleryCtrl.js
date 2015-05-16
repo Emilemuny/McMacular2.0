@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mcmacular-app')
- .controller('sectionfourCtrl', ['$scope', function($scope){
+ .controller('imagegalleryCtrl', ['$scope', function($scope){
 
    $scope.photos = [
      {src: '../../images/McMacular-frontview.jpg', desc: 'McMacular front-view'},
