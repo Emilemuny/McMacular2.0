@@ -60,6 +60,7 @@ angular.module('mcmacular-app')
      }else{
        console.log('Youre good');
        $scope.errorsizefit = null;
+       $('#myModal').modal('show');
      }
    };
  }]);

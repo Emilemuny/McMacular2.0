@@ -33,7 +33,7 @@
           .accordion__tab-content.size(ng-show="isOpenTab('tab two')")
             .row.title 
               h5 WAIST
-            #boxwaist(ng-repeat='sizew in sizees.waist', selectable='setActiveItemsizew(sizew)', ng-click="closeTab('tab one')") 
+            #boxwaist(ng-repeat='sizew in sizees.waist', selectable='setActiveItemsizew(sizew)') 
               a: h5 {{sizew}}
             .row.title 
               h5 LENGTH
@@ -41,10 +41,9 @@
               a: h5 {{sizel}}
         .accordion__tab
            button.btn.btn(ng-click='reservenow()'): h4 Reserve Now
-           a.btn.btn.danger(ng-show='errorsizefit'): {{errorsizefit}}       
-           
-           
-        
+           a.btn.btn.danger(ng-show='errorsizefit') {{errorsizefit}}       
+        #modalcarthere
+          include cart        
                      
               
                 
