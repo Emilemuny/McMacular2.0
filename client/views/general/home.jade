@@ -20,3 +20,24 @@ div(ui-view)
         .wrapper
           include ./sections/section5
       include ../../views/general/footer
+
+      script(type="text/javascript").
+        function initialize(){
+          $('.img-holder').imageScroll({
+            image: null,
+            imageAttribute: 'image',
+            container: $('body'),
+            windowObject: $(window),
+            speed:0.2,
+            coverRatio: 0.67,
+            holderMinHeight: 100,
+            holderMaxHeight: null,
+            extraHeight: 0,
+            mediaWidth: 1600,
+            mediaHeight: 900,
+            parallax: true,
+            touch: false,
+            imgClass: 'img-holder-img'
+          });
+        }
+        initialize();
