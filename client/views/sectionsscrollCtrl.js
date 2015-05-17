@@ -11,6 +11,5 @@ angular.module('mcmacular-app')
     $scope.toSection3 = function() {
       $document.scrollToElementAnimated(section3);
     };
-
   }
 ]).value('duScrollOffset', 30);

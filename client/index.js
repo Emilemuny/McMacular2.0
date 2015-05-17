@@ -2,6 +2,8 @@
 
 angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAnimate', 'ngTouch', 'duScroll'])
   .config(['$stateProvider', '$urlRouterProvider', '$authProvider', function($stateProvider, $urlRouterProvider, $authProvider){
+
+
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
@@ -31,4 +33,7 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
     if($auth.isAuthenticated()){
       $rootScope.user = JSON.parse($window.localStorage.user);
     }
+
   }]);
+
+  
