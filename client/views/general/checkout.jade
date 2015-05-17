@@ -1,0 +1,175 @@
+#wrap
+   #grid
+     .column.column1
+       #step1.step
+         .number
+           span 1
+         .title
+           h1 SHIPPING
+       #address.content
+         form.go-right
+           div
+             input#first_name(type='name', name='first_name', value='', placeholder='First Name', data-trigger='change', data-validation-minlength='1', data-type='name', data-required='true', data-error-message='Enter Your First Name')
+             label(for='first_name') First Name
+           div
+             input#last_name(type='name', name='last_name', value='', placeholder='Last Name', data-trigger='change', data-validation-minlength='1', data-type='name', data-required='true', data-error-message='Enter Your Last Name')
+             label(for='last_name') Last Name
+           div
+             input#telephone(type='phone', name='telephone', value='', placeholder='Phone(555)-555-5555', data-trigger='change', data-validation-minlength='1', data-type='number', data-required='true', data-error-message='Enter Your Telephone Number')
+             label(for='telephone') Telephone
+           div
+             input#address(type='text', name='address', value='', placeholder='Address', data-trigger='change', data-validation-minlength='1', data-type='text', data-required='true', data-error-message='Enter Your Billing Address')
+             label(for='Address') Address
+           div
+             input#city(type='text', name='city', value='', placeholder='City', data-trigger='change', data-validation-minlength='1', data-type='text', data-required='true', data-error-message='Enter Your Billing City')
+             label(for='city') City
+           div
+             .state_options
+               .select
+                 select#state
+                   option(value='1') Alabama
+                   option(value='2') Alaska
+                   option(value='3') Arkansas
+                   option(value='4') Etc.
+               label.state(for='state') State
+           div
+             input#zip(type='text', name='zip', value='', placeholder='Zip Code', data-trigger='change', data-validation-minlength='1', data-type='text', data-required='true', data-error-message='Enter Your Billing Zip Code')
+             label(for='zip') Zip Code
+           div
+             .country_options
+               .select
+                 select#country
+                   option(value='1') United States
+                   option(value='2') United Kingdom
+                   option(value='3') Uganda
+                   option(value='4') Etc.
+               label.country(for='country') Country
+           div(style='height: 76px')
+             input(type='checkbox')
+             label.same(for='same_as_shipping') Same As Billing Address
+             span
+         a.continue(href='#') Continue
+     .column.column2
+       #step2.step
+         .number
+           span 2
+         .title
+           h1 BILLING
+         .modify
+           i.fa.fa-plus-circle
+       #payment.content
+         .left
+           form.go-right
+             div
+               input#card_number(type='text', name='card_number', value='', placeholder='xxxx-xxxx-xxxx-xxxx', data-trigger='change', data-validation-minlength='1', data-type='name', data-required='true', data-error-message='Enter Your Credit Card Number')
+               label(for='card_number') Card Number
+             div
+               .expiry
+                 .month_select
+                   select#exp_month(name='exp_month', value='', placeholder='', data-trigger='change', data-type='name', data-required='true', data-error-message='Enter Your Credit Card Expiration Date')
+                     option(value='1') 01 (Jan)
+                     option(value='2') 02 (Feb)
+                     option(value='3') 03 (Mar)
+                     option(value='4') 04 (Apr)
+                     option(value='5') 05 (May)
+                     option(value='6') 06 (Jun)
+                     option(value='7') 07 (Jul)
+                     option(value='8') 08 (Aug)
+                     option(value='9') 09 (Sep)
+                     option(value='10') 10 (Oct)
+                     option(value='11') 11 (Nov)
+                     option(value='12') 12 (Dec)
+                 .year_select
+                   select#exp_year(name='exp_year', value='', placeholder='', data-trigger='change', data-type='name', data-required='true', data-error-message='Enter Your Credit Card Expiration Date')
+                     option(value='1') 14 
+                     option(value='2') 15 (Feb)
+                     option(value='3') 16 (Mar)
+                     option(value='4') 17 (Apr)
+                     option(value='5') 18 (May)
+                     option(value='6') 19 (Jun)
+                     option(value='7') 20 (Jul)
+                     option(value='8') 22 (Aug)
+                     option(value='9') 23 (Sep)
+                     option(value='10') 24 (Oct)
+                     option(value='11') 25 (Nov)
+                     option(value='12') 26 (Dec)
+                 label.exp_date(for='Exp_Date') Exp Date
+             .sec_num
+               div
+                 input#ccv(type='text', name='ccv', value='', placeholder='123', data-trigger='change', data-validation-minlength='3', data-type='name', data-required='true', data-error-message='Enter Your Card Security Code')
+                 label(for='ccv') Security Code
+       #billingaddress.content
+         form.go-right
+           div
+             input#first_name(type='name', name='first_name', value='', placeholder='First Name', data-trigger='change', data-validation-minlength='1', data-type='name', data-required='true', data-error-message='Enter Your First Name')
+             label(for='first_name') First Name
+           div
+             input#last_name(type='name', name='last_name', value='', placeholder='Last Name', data-trigger='change', data-validation-minlength='1', data-type='name', data-required='true', data-error-message='Enter Your Last Name')
+             label(for='last_name') Last Name
+           div
+             input#telephone(type='phone', name='telephone', value='', placeholder='Phone(555)-555-5555', data-trigger='change', data-validation-minlength='1', data-type='number', data-required='true', data-error-message='Enter Your Telephone Number')
+             label(for='telephone') Telephone
+           div
+             input#address(type='text', name='address', value='', placeholder='Address', data-trigger='change', data-validation-minlength='1', data-type='text', data-required='true', data-error-message='Enter Your Billing Address')
+             label(for='Address') Address
+           div
+             input#city(type='text', name='city', value='', placeholder='City', data-trigger='change', data-validation-minlength='1', data-type='text', data-required='true', data-error-message='Enter Your Billing City')
+             label(for='city') City
+           div
+             .state_options
+               .select
+                 select#state
+                   option(value='1') Alabama
+                   option(value='2') Alaska
+                   option(value='3') Arkansas
+                   option(value='4') Etc.
+               label.state(for='state') State
+           div
+             input#zip(type='text', name='zip', value='', placeholder='Zip Code', data-trigger='change', data-validation-minlength='1', data-type='text', data-required='true', data-error-message='Enter Your Billing Zip Code')
+             label(for='zip') Zip Code
+           div
+             .country_options
+               .select
+                 select#country
+                   option(value='1') United States
+                   option(value='2') United Kingdom
+                   option(value='3') Uganda
+                   option(value='4') Etc.
+               label.country(for='country') Country
+         a.continue(href='#') Continue
+     .column.column3
+       #step3.step
+         .number
+           span 3
+         .title
+           h1 REVIEW
+         .modify
+           i.fa.fa-plus-circle
+       #final_products.content
+         #ordered.left
+           .products
+             .product_image
+               img(src='/../images/McMacular-sideview.jpg', style='width:65%')
+             .product_details
+               span.product_name McMacular Silk lined denim
+               span.quantity 1
+               span.price $45.00
+           .totals
+             span.subtitle
+               | Subtotal 
+               span#sub_price $45.00
+             span.subtitle
+               | Tax 
+               span#sub_tax $2.00
+             span.subtitle
+               | Shipping 
+               span#sub_ship $4.00
+           .final
+             span.title
+               | Total 
+               span#calculated_total $51.00
+         #reviewed.right
+           #complete
+             a#complete.big_button(href='#') CHECKOUT
+             span.sub
+               | By selecting this button you agree to the purchase and subsequent payment for this order.

@@ -11,6 +11,8 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
       .state('faq', {url:'/faq', templateUrl:'/views/general/faq.html'})
       .state('contact', {url:'/contact', templateUrl:'/views/general/contact.html'})
 
+      .state('checkout', {url:'/checkout', templateUrl: '/views/general/checkout.html'})
+
       .state('register', {url:'/register', templateUrl:'/views/users/users.html', controller:'UsersCtrl'})
       .state('login', {url:'/login', templateUrl:'/views/users/users.html', controller:'UsersCtrl'});
 
@@ -27,13 +29,9 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
         scopeDelimiter: '+',
         authorizationEndpoint: 'https://api.instagram.com/oauth/authorize'
     });
-
   }])
   .run(['$rootScope', '$window', '$auth', function($rootScope, $window, $auth){
     if($auth.isAuthenticated()){
       $rootScope.user = JSON.parse($window.localStorage.user);
     }
-
   }]);
-
-  

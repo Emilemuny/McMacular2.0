@@ -20,22 +20,22 @@
     .row
       .accordion__container
         .accordion__tab
-          .accordion__tab-title(ng-click="openTab('tab one')")
+          .accordion__tab-titlee(ng-click="openTab('tab one')")
             a: h4(ng-model='activeItem')
               | {{activeItem}}
           .accordion__tab-content(ng-show="isOpenTab('tab one')") 
             .row(ng-repeat='fit in fits',selectable='setActiveItem(fit)', ng-click="closeTab('tab one')")
               a: h4 {{fit}}
         .accordion__tab
-          .accordion__tab-title(ng-click="openTab('tab two')", ng-model='activeItem' )
+          .accordion__tab-titlee(ng-click="openTab('tab two')", ng-model='activeItem' )
             a: h4
               | Size {{activesizewaist}}  {{activesizelen}}
           .accordion__tab-content.size(ng-show="isOpenTab('tab two')")
-            .row.title 
+            .row.titlee 
               h5 WAIST
             #boxwaist(ng-repeat='sizew in sizees.waist', selectable='setActiveItemsizew(sizew)') 
               a: h5 {{sizew}}
-            .row.title 
+            .row.titlee 
               h5 LENGTH
             #boxlengthh(ng-repeat='sizel in sizees.lengthh', selectable='setActiveItemsizel(sizel)', ng-click="closeTab('tab one')")
               a: h5 {{sizel}}
