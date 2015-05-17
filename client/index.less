@@ -310,21 +310,21 @@ footer {
 #boxwaist {
   width: 8%;
   padding-bottom: 4%;
-  background-color: #ddd;
+  background-color: #fff;
   text-align: center;
   display: inline-block;
 }
 #boxlengthh {
   width: 8%;
   padding-bottom: 7%;
-  background-color: #ddd;
+  background-color: #fff;
   text-align: center;
   display: inline-block;
 }
 .row.title h5 {
   font-size:16px;color:#fff;
   line-height:29px;text-align:center;
-  background:#000;
+  background:#333;
 }
 .accordion__container .row {
   margin: 0px;
@@ -332,17 +332,17 @@ footer {
 .accordion__tab {
     background: white;
     color: #333333;
-    border-bottom: 8px solid white;
+    border-bottom: 0px solid white;
 }
 .accordion__tab-title {
-    background: #ddd;
+    background: #fff;
     padding: 11px;
     cursor: pointer;
     margin: 8px;
     border: 1px solid #A19797;
 }
 .accordion__tab-content {
-    background: #ddd;
+    background: #fff;
     border: 1px solid #A19797;
     margin: 8px;
     margin-top: -15px
@@ -356,11 +356,37 @@ footer {
 .accordion__container a {
   color: #333333;
 }
+
+.accordion__tab button.btn {
+  background: #333;
+}
+
+.accordion__tab.res button:hover {
+  background-color: #eb5b5b;
+}
+
+h4.res {
+  color: #fff;
+}
 //fit and size reserve end.
 //Cart modal start
+
+#modalHeader.modal-header.modelHeaderBG {
+  background-color: #333;
+}
+
+#modalHeader.modal-header.modelHeaderBG button.close {
+  color: #fff;
+}
+#modalHeader.modal-header.modelHeaderBG h4 {
+  color: #fff;
+}
+#modalHeader.modal-header.modelHeaderBG button {
+  color: #fff;
+}
 #modaldialog.modal-dialog.modal-dialog-center {
   top: 20px;
-  width: 300px;
+  width: 335px;
 }
 .modal {
   left: inherit;
@@ -369,4 +395,8 @@ footer {
 .modal-content {
   height: 100vh;
 }
+#modalFooter.modal-footer .accordion__tab button.btn {
+  width: 305px;
+}
+
 //Cart modal end

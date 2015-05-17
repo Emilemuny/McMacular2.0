@@ -9,47 +9,37 @@
             b Your Cart
         #modalBody.modal-body
           #products.row
-            h1 Hello product 1
+            h3 McMacular 
+            h5 Silk lined denim
+            img(src='../../images/McMacular-sideview.jpg', style='width:65%') 
           #paintDetali
             .row
-              span.pull-left Waist
-              span#modalWaist.pull-right Waist
-            .row
-              span.pull-left Length
-              span#modalLength.pull-right Length
-            .row
-              span.pull-left Straight
-              span#modalStraight.pull-right Straight
-            .row
-              span.pull-left Slim
-              span#modalSlim.pull-right Slim
-            .row
-              span.pull-left Color
-              span#modalColor.pull-right Color
-          #subtotal.halfWhite.row
-            b Shipping
-            .row
-              .col-md-8
-                input#shipping_type_domestic(type='radio', value='domestic', name='shippingType', checked='checked')
-                span Domestic 
-              .col-md-4
-                .pull-right
-                  span $
-                  span#domesticPrice.pull-right
-            .row
-              .col-md-8
-                input#shipping_type_international(type='radio', value='international', name='shippingType')
-                span International 
-              .col-md-4
-                .pull-right
-                  span $
-                  span#internationalPrice.pull-right
+              span.pull-left: h5 {{activesizewaist}}" x
+              span.pull-left: h5  {{activesizelen}}"
+              span.pull-left: h5 , {{activeItem}}
           #total.row.halfWhite(style='border-top:2px solid gray')
             b
-              span.pull-left Total
+              span.pull-left: h5 QTY
             b
-              span#spantotal.pull-right  
+              span#spantotal.pull-right: h5 1 
+          #total.row.halfWhite(style='border-top:2px solid gray')
+            .row
+              b
+                span.pull-left: h4 SUBTOTAL:
+              b
+                span.pull-right: h4 $271
+            .row
+              b
+                span.pull-left: h4 SHIPPING:
+              b
+                span#spantotal.pull-right: h4 FREE  
+          #total.row.halfWhite(style='border-top:2px solid gray')
+            b
+              span.pull-left: h3 Total
+            b
+              span#spantotal.pull-right: h3 $271 
         #modalFooter.modal-footer
-          button#modelFooterBtn(type='button', onclick='checkout();')
-            b CHECKOUT
+            b
+              .accordion__tab.res
+                 button.btn.btn(ng-click='reservenow()'): h4.res CHECKOUT
       
