@@ -17,8 +17,8 @@
               input.form-control(type='text', name='lastname', ng-model='shipping.lastname', required, placeholder='Last Name')
               div(ng-if='shippingForm.lastname.$touched && shippingform.lastname.$invalid', ng-messages='shippingForm.lastname.$error', ng-messages-include='/views/partials/form_validation_messages.html')
             .form-group
-              label(for='phone') Phone
-              input.form-control(type='number', value='8572668102', name='phone', ng-model='shipping.phone', placeholder='Phone (555)-555-5555)')
+              label(for='email') Email
+              input.form-control(type='email', name='email', ng-model='shipping.email', placeholder='@' required)
             .form-group
               label(for='address') Address 
               input.form-control(type='text', name='address', ng-model='shipping.address', required, placeholder='Address')      
@@ -71,6 +71,7 @@
                   | Error: invalid CVC!
              .form-group  
                button.btn.btn-default(type='submit') Continue
+               p(ng-if='carderror') {{carderror}}
                
               
        #billingaddress.content(ng-if='!shipping.sameasbilling')
@@ -84,8 +85,8 @@
               input.form-control(type='text', name='lastname', ng-model='billing.lastname', required, placeholder='Last Name')
               div(ng-if='billingForm.lastname.$touched && billingform.lastname.$invalid', ng-messages='billingForm.lastname.$error', ng-messages-include='/views/partials/form_validation_messages.html')
             .form-group
-              label(for='phone') Phone
-              input.form-control(type='number', name='phone', ng-value='billing.phone', placeholder='Phone (555)-555-5555)')
+              label(for='email') Email
+              input.form-control(type='email', name='email', ng-value='billing.email', placeholder='@')
             .form-group
               label(for='address') Address 
               input.form-control(type='text', name='address', ng-model='billing.address', required, placeholder='Address')      
@@ -123,24 +124,24 @@
                img(src='/../images/McMacular-sideview.jpg', style='width:65%')
              .product_details
                span.product_name McMacular Silk lined denim
-               span.quantity 1
-               span.price $45.00
+               span.quantity QTY 1
+               span.price $271.00
            .totals
              span.subtitle
                | Subtotal 
-               span#sub_price $45.00
+               span#sub_price $271.00
              span.subtitle
                | Tax 
-               span#sub_tax $2.00
+               span#sub_tax $0.00
              span.subtitle
                | Shipping 
-               span#sub_ship $4.00
+               span#sub_ship $0.00
            .final
              span.title
                | Total 
-               span#calculated_total $51.00
+               span#calculated_total $271.00
          #reviewed.right
            #complete
-             a#complete.big_button(href='#') CHECKOUT
+             button#complete.big_button(ng-click='chargenow()') CHECKOUT
              span.sub
                | By selecting this button you agree to the purchase and subsequent payment for this order.
