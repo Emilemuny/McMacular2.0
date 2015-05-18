@@ -52,14 +52,25 @@ html {
   // box-shadow: 0.25rem 0.25rem 0.3125rem rgba(0,0,0,0.5);
 }
 #section1 {
+  margin-top: -30px;
   background-image:url(./images/user/slider-img/McMacular-homepage.jpg);
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
   position: relative;
+  right: 20px;
 
-  height: 100vh;
+  // height: 100vh;
 }
+
+section#section1.pane.homepage.wrapper {
+  margin-right: 40px;
+}
+
+#section1.pane{
+  width: 105%;
+}
+
 #section2 {
   padding: 0;
   text-align: center;
@@ -449,13 +460,13 @@ z-index: 1;
 padding: 8px 12px;
 outline: 0;
 }
-form input:valid{
+form.some input:valid{
 background: white;
 }
-form input:focus{
+form.some input:focus{
 border-color:#80c0ff;
 }
-form input:focus + label{
+form.some input:focus + label.some{
 background:#80c0ff;
 color: white;
 font-size: 1em;
@@ -463,19 +474,19 @@ padding: 1px 6px;
 z-index: 2;
 text-transform: uppercase;
 }
-form label {
+form.some label.some {
 transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
 font-size:1em;
 position: absolute;
 color: #999;
 padding: 7px 6px;
 }
-form textarea {
+form.some textarea {
 display: block;
 resize: vertical;
 }
 
-form.go-right label {
+form.some.go-right label.some {
 top: 2px;
 right: 100%;
 width: 100%;
@@ -484,7 +495,7 @@ bottom: 2px;
 border-bottom-right-radius:3px;
 border-top-right-radius:3px;
 }
-form.go-right input:focus + label, form.go-right textarea:focus + label {
+form.some.go-right input:focus + label.some, form.some.go-right textarea:focus + label.some {
 right: 0;
 margin-right: 0;
 width: 40%;
@@ -561,7 +572,7 @@ img{
   float:left;
 }
 .content label{
-  font-size:1.5em;
+  font-size:1em;
 }
 .content input{
   width:100%;
@@ -670,8 +681,8 @@ img{
   margin-top: -50px;
 }
 
-#billingaddress .state_options label,
-#billingaddress .country_options label.country{
+#billingaddress .state_options label.some,
+#billingaddress .country_options label.some.country{
   right: 0;
   margin-right: 0;
   width: 40%;
@@ -713,7 +724,7 @@ img{
 #shipping input[type="radio"]:focus{
   width:30px;
 }
-#shipping label{
+#shipping label.some{
   padding:0;
   font-size:1.3em;
 }
@@ -723,7 +734,7 @@ img{
 #payment .expiry{
   margin-top:7px;
 }
-#payment label.exp_date{
+#payment label.some.exp_date{
   right: 0;
   margin-right: 0;
   width: 40%;
@@ -930,14 +941,14 @@ margin:0;
 margin-top:30px;
 }
 }
-form > div {
+form.some > div {
 position: relative;
 overflow: hidden;
 width:100%;
 max-width:320px;
 
 }
-form input, form textarea {
+form.some input, form textarea {
 width: 100%;
 max-width:320px;
 border: 2px solid gray;
@@ -949,13 +960,13 @@ z-index: 1;
 padding: 8px 12px;
 outline: 0;
 }
-form input:valid, form textarea:valid {
+form.some input:valid, form textarea:valid {
 background: white;
 }
-form input:focus, form textarea:focus {
+form.some input:focus, form textarea:focus {
 border-color: #f06d06;
 }
-form input:focus + label, form textarea:focus + label {
+form.some input:focus + label.some, form textarea:focus + label.some {
 background:#DFDFDF;
 color: white;
 font-size: 70%;
@@ -963,18 +974,18 @@ padding: 1px 6px;
 z-index: 2;
 text-transform: uppercase;
 }
-form label {
+form.some label.some {
 transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
 position: absolute;
 color: #999;
 padding: 7px 6px;
 }
-form textarea {
+form.some textarea {
 display: block;
 resize: vertical;
 }
 
-form.go-right label {
+form.some.go-right label.some {
 top: 2px;
 right: 100%;
 width: 100%;
@@ -983,7 +994,7 @@ bottom: 2px;
 border-bottom-right-radius:3px;
 border-top-right-radius:3px;
 }
-form.go-right input:focus + label, form.go-right textarea:focus + label {
+form.some.go-right input:focus + label.some, form.some.go-right textarea:focus + label.some {
 right: 0;
 margin-right: 0;
 width: 40%;
@@ -1002,7 +1013,7 @@ padding-top: 5px;
 //Invalid credit card info start
 
 .ng-invalid {
-    color: red;
+    color: black;
 }
 
 // invalid credit card info end

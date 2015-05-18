@@ -34,11 +34,13 @@ ordersSchema.statics.purchase = function(o, cb){
     description: o.info.name + ' Purchased a Macmacular product'
   }, function(err, charge){
     if(!err){
-      this.payment.transaction_id = charge.id;
-      this.payment.date = new Date();
-      this.shipping.customer = o.info.name;
-      this.shipping.address = o.info.address + o.info.city + o.info.state + o.info.zipcode + o.info.country;
-      this.shipping.email = o.info.email;
+      // this.payment.transaction_id = charge.id;
+      // this.payment.date = new Date();
+      // this.shipping.customer = o.info.name;
+      // this.shipping.address = o.info.address + o.info.city + o.info.state + o.info.zipcode + o.info.country;
+      // this.shipping.email = o.info.email;
+
+      console.log('No error');
     }
     cb(err, charge);
   });

@@ -9,11 +9,11 @@
        #address.content
          form(name='shippingForm', novalidate)
             .form-group
-              label(for='name') First Name
+              label#d(for='name') First Name
               input#name.form-control(type='text', name='name', ng-model='shipping.name', ng-minlength='3', required, placeholder='First Name')
               div(ng-if='shippingForm.name.$touched && shippingform.name.$invalid', ng-messages='shippingForm.name.$error', ng-messages-include='/views/partials/form_validation_messages.html')
             .form-group
-              label(for='lastname') Last Name
+              label#d(for='lastname') Last Name
               input.form-control(type='text', name='lastname', ng-model='shipping.lastname', required, placeholder='Last Name')
               div(ng-if='shippingForm.lastname.$touched && shippingform.lastname.$invalid', ng-messages='shippingForm.lastname.$error', ng-messages-include='/views/partials/form_validation_messages.html')
             .form-group
