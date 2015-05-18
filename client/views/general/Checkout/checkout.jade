@@ -1,0 +1,146 @@
+#wrap
+   #grid
+     .column.column1
+       #step1.step
+         .number
+           span 1
+         .title
+           h1 SHIPPING
+       #address.content
+         form(name='shippingForm', novalidate)
+            .form-group
+              label(for='name') First Name
+              input#name.form-control(type='text', name='name', ng-model='shipping.name', ng-minlength='3', required, placeholder='First Name')
+              div(ng-if='shippingForm.name.$touched && shippingform.name.$invalid', ng-messages='shippingForm.name.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='lastname') Last Name
+              input.form-control(type='text', name='lastname', ng-model='shipping.lastname', required, placeholder='Last Name')
+              div(ng-if='shippingForm.lastname.$touched && shippingform.lastname.$invalid', ng-messages='shippingForm.lastname.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='phone') Phone
+              input.form-control(type='number', value='8572668102', name='phone', ng-model='shipping.phone', placeholder='Phone (555)-555-5555)')
+            .form-group
+              label(for='address') Address 
+              input.form-control(type='text', name='address', ng-model='shipping.address', required, placeholder='Address')      
+              div(ng-if='shippingForm.address.$touched', ng-messages='shippingForm.address.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='city') City
+              input.form-control(type='text', name='city', ng-model='shipping.city', required, placeholder='City')
+              div(ng-if='shippingForm.city.$touched', ng-messages='shippingForm.city.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='city') State
+              input.form-control(type='text', name='state', ng-model='shipping.state', ng-minlength='2', required, placeholder='State')
+              div(ng-if='shippingForm.state.$touched', ng-messages='shippingForm.state.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='zipcode') Zip code
+              input.form-control(type='text', name='zipcode', ng-model='shipping.zipcode', required)
+              div(ng-if='shippingForm.zipcode.$touched', ng-messages='shippingForm.zipcode.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='country') Country
+              input.form-control(type='text', name='country', ng-model='shipping.country', required)
+              div(ng-if='shippingForm.country.$touched', ng-messages='shippingForm.country.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group(ng-if='shippingForm.$valid') 
+              h5 Same address for billing ?
+              input.sameasbilling(type='checkbox',ng-model='shipping.sameasbilling')
+              button.btn.btn-default(type='submit', ng-click='submitshipping(shipping)') Continue
+     .column.column2(ng-app='step1App') 
+       #step2.step
+         .number
+           span 2
+         .title
+           h1 BILLING
+         .modify
+           i.fa.fa-plus-circle
+       #payment.content
+         .left
+           form.go-right(stripe-form='handleStripe' name='ccform')
+             .form-group
+               input#card_number.form-control(type='text' name='card' ng-model='number' payments-validate='card' payments-format='card', placeholder='xxxx-xxxx-xxxx-xxxx')
+               label(for='card_number') Card Number
+               div(ng-if='ccform.card.$invalid')
+                  | Error: invalid card number!
+             .form-group
+               input.input-block-level(type='text' name='expiry' ng-model='expiry', payments-validate='expiry', payments-format='expiry') 
+               label(for='card_expiry') Expiry
+               div(ng-if='ccform.expiry.$invalid')
+                  | Error: invalid expiration date!
+             .form-group
+               input#ccv.form-control(type='text' name='cvc' ng-model='cvc' payments-validate='cvc', payments-format='cvc', placeholder='123')
+               label(for='ccv') Security Code
+               div(ng-if='ccform.cvc.$invalid')
+                  | Error: invalid CVC!
+             .form-group  
+               button.btn.btn-default(type='submit') Continue
+               
+              
+       #billingaddress.content(ng-if='!shipping.sameasbilling')
+         form(name='billingForm', novalidate)
+            .form-group
+              label(for='name') First Name
+              input#name.form-control(type='text', name='name', ng-model='billing.name', ng-minlength='3', required, placeholder='First Name')
+              div(ng-if='billingForm.name.$touched && billingform.name.$invalid', ng-messages='billingForm.name.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='lastname') Last Name
+              input.form-control(type='text', name='lastname', ng-model='billing.lastname', required, placeholder='Last Name')
+              div(ng-if='billingForm.lastname.$touched && billingform.lastname.$invalid', ng-messages='billingForm.lastname.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='phone') Phone
+              input.form-control(type='number', name='phone', ng-value='billing.phone', placeholder='Phone (555)-555-5555)')
+            .form-group
+              label(for='address') Address 
+              input.form-control(type='text', name='address', ng-model='billing.address', required, placeholder='Address')      
+              div(ng-if='billingForm.address.$touched', ng-messages='billingForm.address.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='city') City
+              input.form-control(type='text', name='city', ng-model='billing.city', required, placeholder='City')
+              div(ng-if='billingForm.city.$touched', ng-messages='billingForm.city.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='city') State
+              input.form-control(type='text', name='state', ng-model='billing.state', ng-minlength='2', required, placeholder='State')
+              div(ng-if='billingForm.state.$touched', ng-messages='billingForm.state.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='zipcode') Zip code
+              input.form-control(type='text', name='zipcode', ng-model='billing.zipcode', required)
+              div(ng-if='billingForm.zipcode.$touched', ng-messages='billingForm.zipcode.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group
+              label(for='country') Country
+              input.form-control(type='text', name='country', ng-model='billing.country', required)
+              div(ng-if='billingForm.country.$touched', ng-messages='billingForm.country.$error', ng-messages-include='/views/partials/form_validation_messages.html')
+            .form-group  
+              button.btn.btn-default(ng-if='billingForm.$valid',type='submit', ng-click='submitbilling(billing)') Continue
+     .column.column3
+       #step3.step
+         .number
+           span 3
+         .title
+           h1 REVIEW
+         .modify
+           i.fa.fa-plus-circle
+       #final_products.content
+         #ordered.left
+           .products
+             .product_image
+               img(src='/../images/McMacular-sideview.jpg', style='width:65%')
+             .product_details
+               span.product_name McMacular Silk lined denim
+               span.quantity 1
+               span.price $45.00
+           .totals
+             span.subtitle
+               | Subtotal 
+               span#sub_price $45.00
+             span.subtitle
+               | Tax 
+               span#sub_tax $2.00
+             span.subtitle
+               | Shipping 
+               span#sub_ship $4.00
+           .final
+             span.title
+               | Total 
+               span#calculated_total $51.00
+         #reviewed.right
+           #complete
+             a#complete.big_button(href='#') CHECKOUT
+             span.sub
+               | By selecting this button you agree to the purchase and subsequent payment for this order.

@@ -611,50 +611,53 @@ img{
     display:inline-block;
     width:100%;
     padding: 5px;
-    font-size: 2em;
+    font-size: 1.3em;
     line-height: 1;
     border: 0;
     border-radius:0;
     height: 40px;
 }
-#address .state_options label,
-#address .country_options label.country{
-  right: 0;
-  margin-right: 0;
-  width: 40%;
-  top:5px;
-  bottom:3px;
-  background: #393B38;
-  color: white;
-  font-size: 1em;
-  padding: 4px 6px;
-  z-index: 2;
-  text-transform: uppercase;
-}
-#address input[type="checkbox"]{
-  width:10%;
-  float:left;
-}
-#address label.same,
-#address form input:focus + label.same{
-  width:85%;
-  float:left;
-  margin-left:0;
-  display:block;
-  font-size:1em;
- padding:0;
-  margin-bottom:15px;
- top:3px;
- right: 100%;
- margin-right:-100%;
- bottom: 0;
- background:transparent;
- color:initial;
- text-transform:uppercase;
- border-bottom-right-radius: 3px;
- border-top-right-radius: 3px;
-}
+// #address .state_options label,
+// #address .country_options label.country{
+//   right: 0;
+//   margin-right: 0;
+//   width: 40%;
+//   top:5px;
+//   bottom:3px;
+//   background: #393B38;
+//   color: white;
+//   font-size: 1em;
+//   padding: 4px 6px;
+//   z-index: 2;
+//   text-transform: uppercase;
+// }
+// #address input[type="checkbox"]{
+//   width:10%;
+//   float:left;
+// }
+// #address label.same,
+// #address form input:focus + label.same{
+//   width:85%;
+//   float:left;
+//   margin-left:0;
+//   display:block;
+//   font-size:1em;
+//  padding:0;
+//   margin-bottom:15px;
+//  top:3px;
+//  right: 100%;
+//  margin-right:-100%;
+//  bottom: 0;
+//  background:transparent;
+//  color:initial;
+//  text-transform:uppercase;
+//  border-bottom-right-radius: 3px;
+//  border-top-right-radius: 3px;
+// }
 
+#billingaddress {
+  margin-top: -50px;
+}
 
 #billingaddress .state_options label,
 #billingaddress .country_options label.country{
@@ -663,9 +666,10 @@ img{
   width: 40%;
   top:5px;
   bottom:3px;
-  background:#80c0ff;
+  background:#333333;
   color: white;
   font-size: 1em;
+  color: #fff;
   padding: 4px 6px;
   z-index: 2;
   text-transform: uppercase;
@@ -975,4 +979,22 @@ width: 40%;
 padding-top: 5px;
 }
 }
+
+.checkbox {
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+.checkbox input{
+  height: 40px;
+}
+
+//Invalid credit card info start
+
+.ng-invalid {
+    color: red;
+}
+
+// invalid credit card info end
+
+
 // Checkout page END

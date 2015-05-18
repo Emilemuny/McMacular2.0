@@ -1,8 +1,7 @@
 'use strict';
 
-angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAnimate', 'ngTouch', 'duScroll'])
+angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAnimate', 'ngTouch', 'duScroll', 'angularPayments'])
   .config(['$stateProvider', '$urlRouterProvider', '$authProvider', function($stateProvider, $urlRouterProvider, $authProvider){
-
 
     $urlRouterProvider.otherwise('/');
 
@@ -11,7 +10,7 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
       .state('faq', {url:'/faq', templateUrl:'/views/general/faq.html'})
       .state('contact', {url:'/contact', templateUrl:'/views/general/contact.html'})
 
-      .state('checkout', {url:'/checkout', templateUrl: '/views/general/checkout.html'})
+      .state('checkout', {url:'/checkout', templateUrl: '/views/general/Checkout/checkout.html', controller:'CheckoutCtrl'})
 
       .state('register', {url:'/register', templateUrl:'/views/users/users.html', controller:'UsersCtrl'})
       .state('login', {url:'/login', templateUrl:'/views/users/users.html', controller:'UsersCtrl'});
@@ -29,6 +28,8 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
         scopeDelimiter: '+',
         authorizationEndpoint: 'https://api.instagram.com/oauth/authorize'
     });
+    
+    window.Stripe.setPublishableKey('pk_test_JGEKrKiQpasBibRuFHFbQ0KK');
   }])
   .run(['$rootScope', '$window', '$auth', function($rootScope, $window, $auth){
     if($auth.isAuthenticated()){
