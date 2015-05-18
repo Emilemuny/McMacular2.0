@@ -10,7 +10,6 @@ var Orders;
 var ordersSchema = mongoose.Schema({
   customerId: String,
   createdOn: {type: Date, default: Date.now, required: true},
-
   shipping: {
     customer: String,
     address: String,
@@ -32,7 +31,7 @@ ordersSchema.statics.purchase = function(o, cb){
     amount: 271,
     currency: 'usd',
     source: o.token,
-    description: o.description
+    description: o.info.name + ' Purchased a Macmacular product'
   }, function(err, charge){
     if(!err){
       this.payment.transaction_id = charge.id;

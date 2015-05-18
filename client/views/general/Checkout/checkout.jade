@@ -33,11 +33,11 @@
               div(ng-if='shippingForm.state.$touched', ng-messages='shippingForm.state.$error', ng-messages-include='/views/partials/form_validation_messages.html')
             .form-group
               label(for='zipcode') Zip code
-              input.form-control(type='text', name='zipcode', ng-model='shipping.zipcode', required)
+              input.form-control(type='text', name='zipcode', ng-model='shipping.zipcode', placeholder='Zip code' required)
               div(ng-if='shippingForm.zipcode.$touched', ng-messages='shippingForm.zipcode.$error', ng-messages-include='/views/partials/form_validation_messages.html')
             .form-group
               label(for='country') Country
-              input.form-control(type='text', name='country', ng-model='shipping.country', required)
+              input.form-control(type='text', name='country', ng-model='shipping.country', placeholder='United States' required)
               div(ng-if='shippingForm.country.$touched', ng-messages='shippingForm.country.$error', ng-messages-include='/views/partials/form_validation_messages.html')
             .form-group(ng-if='shippingForm.$valid') 
               h5 Same address for billing ?
@@ -101,11 +101,11 @@
               div(ng-if='billingForm.state.$touched', ng-messages='billingForm.state.$error', ng-messages-include='/views/partials/form_validation_messages.html')
             .form-group
               label(for='zipcode') Zip code
-              input.form-control(type='text', name='zipcode', ng-model='billing.zipcode', required)
+              input.form-control(type='text', name='zipcode', ng-model='billing.zipcode', placeholder='Zip code' required)
               div(ng-if='billingForm.zipcode.$touched', ng-messages='billingForm.zipcode.$error', ng-messages-include='/views/partials/form_validation_messages.html')
             .form-group
               label(for='country') Country
-              input.form-control(type='text', name='country', ng-model='billing.country', required)
+              input.form-control(type='text', name='country', ng-model='billing.country', placeholder='United States' required)
               div(ng-if='billingForm.country.$touched', ng-messages='billingForm.country.$error', ng-messages-include='/views/partials/form_validation_messages.html')
             .form-group  
               button.btn.btn-default(ng-if='billingForm.$valid',type='submit', ng-click='submitbilling(billing)') Continue

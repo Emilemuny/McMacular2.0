@@ -5,7 +5,7 @@ var Precheckoutinfo;
 
 var precheckoutinfoSchema = mongoose.Schema({
 
-  firstname: String,
+  name: String,
   lastname: String,
   email: String,
   address: String,
