@@ -11,7 +11,7 @@ angular.module('mcmacular-app')
     $('.column.column1').css('opacity','0.2');
 
     Customer.saveshipping(shipping).then(function(response){
-      
+      console.log('Response**', response);
 
     });
 

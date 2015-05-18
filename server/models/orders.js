@@ -7,10 +7,9 @@ var stripe = require('stripe')(process.env.STRIPE_KEY);
 var Orders;
 
 
-
 var ordersSchema = mongoose.Schema({
   customerId: String,
-  createdOn: [{type: Date, default: Date.now, required: true}],
+  createdOn: {type: Date, default: Date.now, required: true},
 
   shipping: {
     customer: String,

@@ -1,6 +1,6 @@
 'use strict';
 
-var Orders = require('../../../models/purchases');
+var Orders = require('../../../models/orders');
 
 module.exports = {
   auth: false,

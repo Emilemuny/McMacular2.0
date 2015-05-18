@@ -11,5 +11,7 @@ module.exports = [
   {method: 'get', path: '/auth/twitter', config: require('../routes/users/authentication/twitter')},
   {method: 'post', path: '/auth/instagram', config: require('../routes/users/authentication/instagram')},
 
-  {method: 'post', path: '/checkout', config: require('../routes/users/cart/checkout')}
+  {method: 'post', path: '/checkout', config: require('../routes/users/cart/checkout')},
+  {method: 'post', path: '/precheckout', config: require('../routes/users/cart/precheckout')}
+
 ];
