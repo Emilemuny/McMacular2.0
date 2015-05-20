@@ -1,0 +1,12 @@
+.container
+  .col-md-4
+  .col-md-4
+    form.form-signin
+      h2 VIP Access
+      h3.form-signin-heading Please sign in
+      label.sr-only(for='name') Username
+      input#inputEmail.form-control(type='text', placeholder='Username', ng-model='user.username' name='username', required='', autofocus='')
+      label.sr-only(for='inputPassword') Password
+      input#inputPassword.form-control(type='password', ng-model='user.password', placeholder='Password', name='password', required='')
+      label
+      button.btn.btn-lg.btn-primary.btn-block(type='submit' ng-click='submit(user)') Sign in

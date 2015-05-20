@@ -6,5 +6,6 @@ angular.module('mcmacular-app')
       delete $rootScope.user;
       $window.localStorage.clear();
       $state.go('home');
+
     };
   }]);

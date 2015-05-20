@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mcmacular-app')
- .controller('reservenowCtrl', ['$scope', function($scope){
+ .controller('reservenowCtrl', ['$scope', '$state', function($scope, $state){
    $scope.activeItem = 'Select Fit';
 
    $scope.fits = ['Modern Slim', 'Classical Straight'];
@@ -60,8 +60,16 @@ angular.module('mcmacular-app')
      }else{
        console.log('Youre good');
        $scope.errorsizefit = null;
-       $('#myModal').modal('show');
+       $('#myModal').modal('toggle');
+       $('body').removeClass('modal-open');
      }
+   };
+   $scope.tocheckout = function(){
+     $('#closemodal').click(function() {
+
+     $('#myModal').modal('hide');
+     $('body').removeClass('modal-open');
+     });
    };
  }]);
 

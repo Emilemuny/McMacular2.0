@@ -40,8 +40,8 @@
               input.form-control(type='text', name='country', ng-model='shipping.country', placeholder='United States' required)
               div(ng-if='shippingForm.country.$touched', ng-messages='shippingForm.country.$error', ng-messages-include='/views/partials/form_validation_messages.html')
             .form-group(ng-if='shippingForm.$valid') 
-              h5 Same address for billing ?
-              input.sameasbilling(type='checkbox',ng-model='shipping.sameasbilling')
+              h5 Different billing address ?
+              input.sameasbilling(type='checkbox',ng-model='shipping.notasbilling')
               button.btn.btn-default(type='submit', ng-click='submitshipping(shipping)') Continue
      .column.column2(ng-app='step1App') 
        #step2.step
@@ -74,7 +74,7 @@
                p(ng-if='carderror') {{carderror}}
                
               
-       #billingaddress.content(ng-if='!shipping.sameasbilling')
+       #billingaddress.content(ng-if='shipping.notasbilling')
          form(name='billingForm', novalidate)
             .form-group
               label(for='name') First Name

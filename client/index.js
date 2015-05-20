@@ -3,10 +3,13 @@
 angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAnimate', 'ngTouch', 'duScroll', 'angularPayments'])
   .config(['$stateProvider', '$urlRouterProvider', '$authProvider', function($stateProvider, $urlRouterProvider, $authProvider){
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/vip');
 
     $stateProvider
-      .state('home', {url:'/', templateUrl:'/views/general/home.html'})
+
+      .state('prelaunch',{url:'/vip', templateUrl: '/views/prelaunch.html', controller: 'prelaunchCtrl'})
+
+      .state('home', {url:'/home', templateUrl:'/views/general/home.html'})
       .state('faq', {url:'/faq', templateUrl:'/views/general/faq.html'})
       .state('contact', {url:'/contact', templateUrl:'/views/general/contact.html'})
 
@@ -28,11 +31,13 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
         scopeDelimiter: '+',
         authorizationEndpoint: 'https://api.instagram.com/oauth/authorize'
     });
-    
+
     window.Stripe.setPublishableKey('pk_test_JGEKrKiQpasBibRuFHFbQ0KK');
   }])
   .run(['$rootScope', '$window', '$auth', function($rootScope, $window, $auth){
     if($auth.isAuthenticated()){
       $rootScope.user = JSON.parse($window.localStorage.user);
     }
+    $rootScope.vipuser = $window.localStorage.vipuser;
+
   }]);

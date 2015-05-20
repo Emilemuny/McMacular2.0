@@ -2,13 +2,17 @@
 
 angular.module('mcmacular-app')
 
-.controller('CheckoutCtrl', ['$scope' , 'Customer', '$state', function($scope, Customer, $state){
+.controller('CheckoutCtrl', ['$scope' , 'Customer', '$state', '$rootScope', function($scope, Customer, $state, $rootScope){
+  if(!$rootScope.vipuser){
+    $state.go('prelaunch');
+  }
+
   $scope.submitshipping = function(shipping){
-    if(shipping.sameasbilling){
+    if(!shipping.notasbilling){
       $scope.billing = shipping;
     }
-    $('.column.column1').css('background-color','#efefef');
-    $('.column.column1').css('opacity','0.2');
+    // $('.column.column1').css('background-color','#efefef');
+    // $('.column.column1').css('opacity','0.2');
 
     Customer.saveshipping(shipping).then(function(response){
       console.log('Response**', response);
@@ -26,8 +30,8 @@ angular.module('mcmacular-app')
       $scope.carderror = result.error.message;
     } else {
       $scope.tknid = result.id;
-      $('.column.column2').css('background-color','#efefef');
-      $('.column.column2').css('opacity','0.2');
+      // $('.column.column2').css('background-color','#efefef');
+      // $('.column.column2').css('opacity','0.2');
     }
   };
   $scope.chargenow = function(){

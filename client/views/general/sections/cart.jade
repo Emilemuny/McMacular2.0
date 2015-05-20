@@ -40,6 +40,7 @@
               span#spantotal.pull-right: h3 $271 
         #modalFooter.modal-footer
             b
-              .accordion__tab.res
-                 button.btn.btn(ui-sref='checkout'): h4.res CHECKOUT
+              .accordion_tab.res
+                 button.btn.btn-default#closemodal(type='button', ng-click='tocheckout()', ui-sref='checkout') Close
+          
       
