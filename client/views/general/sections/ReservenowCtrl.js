@@ -60,16 +60,14 @@ angular.module('mcmacular-app')
      }else{
        console.log('Youre good');
        $scope.errorsizefit = null;
-       $('#myModal').modal('toggle');
-       $('body').removeClass('modal-open');
+       $('#myModal').modal('show');
      }
    };
    $scope.tocheckout = function(){
-     $('#closemodal').click(function() {
-
      $('#myModal').modal('hide');
      $('body').removeClass('modal-open');
-     });
+     $( '.modal-backdrop' ).remove();
+     $state.go('checkout');
    };
  }]);
 

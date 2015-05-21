@@ -39,5 +39,4 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
       $rootScope.user = JSON.parse($window.localStorage.user);
     }
     $rootScope.vipuser = $window.localStorage.vipuser;
-
   }]);
