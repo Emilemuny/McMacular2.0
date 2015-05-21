@@ -32,7 +32,7 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
         authorizationEndpoint: 'https://api.instagram.com/oauth/authorize'
     });
 
-    window.Stripe.setPublishableKey('pk_test_JGEKrKiQpasBibRuFHFbQ0KK');
+    window.Stripe.setPublishableKey('pk_live_JrhB22DdwVqybCz6316b4Cfy');
   }])
   .run(['$rootScope', '$window', '$auth', function($rootScope, $window, $auth){
     if($auth.isAuthenticated()){
