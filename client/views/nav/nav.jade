@@ -11,12 +11,12 @@ nav.navbar.navbar-default(ng-controller='NavCtrl')
       ul.nav.navbar-nav
         li.pull-left
           a(ui-sref='home'): img.navbar-brand(src='../../images/McMacular_Logo.jpg')
-        li.active
-          a(href='#section2', du-smooth-scroll='', du-scrollspy='', duration='2000') WHAT IT'S ALL ABOUT
         li
-          a(href='#section3', du-smooth-scroll='', du-scrollspy='', duration='2000') HOW IT WORKS
+          a.hvr-underline-from-center(href='#section2', du-smooth-scroll='', du-scrollspy='', duration='2000') WHAT IT'S ALL ABOUT
+        li
+          a.hvr-underline-from-center(href='#section3', du-smooth-scroll='', du-scrollspy='', duration='2000') HOW IT WORKS
         li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+          a.dropdown-toggle.hvr-underline-from-center(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
             | More 
             span.caret
           ul.dropdown-menu(role='menu')

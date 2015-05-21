@@ -13,12 +13,14 @@ html {
 .navbar-nav {
     width: 100%;
     text-align: center;
+    position: fixed;
+    z-index: 4;
+    background-color: #fff;
     > li {
       float: none;
       display: inline-block;
     }
   }
-
 
 #bs-example-navbar-collapse-1.collapse.navbar-collapse li a {
   color: #333333;
@@ -144,6 +146,10 @@ section#section1.pane.homepage.wrapper {
   border-top: 1px solid #eb5b5b;
 }
 
+
+.img-circle {
+  border-radius: 6%;
+}
 //Section 3 carousel
 .carousel-control {
   top: initial;
@@ -155,18 +161,18 @@ section#section1.pane.homepage.wrapper {
   width: 0px;
   color: black;
   margin: 0px;
-  top: 105px;
-  left: -46px;
+  top: 45px;
+  left: -26px;
 }
 .carousel-control.right {
   width: 0px;
   color: black;
   margin: 0px;
-  top: 105px;
-  right: 92px;
+  top: 45px;
+  right: -26px;
 }
 .col-md-offset-2 {
-  margin-left: 24.6%;
+  margin-left: 16.6%;
 }
 blockquote {
   border-left: 0px;
@@ -195,25 +201,36 @@ img.slidee {
     width: 64px;
     z-index: 5;
 }
-.arrow.prev {
-    background-image: url("./images/arrow-left.png");
+// .arrow.prev {
+//     background-image: url("./images/arrow-left.png");
+//
+//     left: 20px;
+//     opacity: 0.2;
+//     transition: all 0.2s linear 0s;
+// }
+// .arrow.next {
+//     background-image: url("./images/arrow-right.png");
+//     opacity: 0.2;
+//     right: 20px;
+//     transition: all 0.2s linear 0s;
+// }
+// .arrow.prev:hover{
+//     opacity:1;
+// }
+// .arrow.next:hover{
+//     opacity:1;
+// }
 
-    left: 20px;
-    opacity: 0.2;
-    transition: all 0.2s linear 0s;
+//section4 ruler and olympic
+
+.row.rulerolymp img {
+  transition: background-color 0.7s;
+  -webkit-filter: grayscale(100%);
+  filter: gray; filter: grayscale(100%);
 }
-.arrow.next {
-    background-image: url("./images/arrow-right.png");
-    opacity: 0.2;
-    right: 20px;
-    transition: all 0.2s linear 0s;
-}
-.arrow.prev:hover{
-    opacity:1;
-}
-.arrow.next:hover{
-    opacity:1;
-}
+
+
+
 .navi {
     display: block;
     height: 48px;
@@ -312,9 +329,10 @@ img.slidee {
 }
 
 
+
 //footer css
-@import url(http://fonts.googleapis.com/css?family=Roboto:100);
-@import url(http://weloveiconfonts.com/api/?family=zocial);
+// @import url(http://fonts.googleapis.com/css?family=Roboto:100);
+// @import url(http://weloveiconfonts.com/api/?family=zocial);
 /* Font */
 [class*="zocial-"]:before {
   font-family: 'zocial', sans-serif;
@@ -1090,6 +1108,27 @@ padding-top: 5px;
     color: black;
 }
 
+//big buttons section5
+
+button.buttonssx {
+  width: 100%;
+  font-size: 55px;
+  margin-bottom: 20px;
+  background: #333;
+  color: #fff;
+  height: 31vh;
+}
+.col-md-8.pull-left {
+  margin-left: -50px;
+}
+
+img.aboutus {
+  width: 100%;
+}
+
+// #section5.container {
+//   margin-left: -15px;
+// }
 // invalid credit card info end
 
 
