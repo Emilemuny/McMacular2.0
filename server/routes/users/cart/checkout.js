@@ -10,6 +10,9 @@ module.exports = {
       console.log('error****',err);
       return reply().code(400);
       }
+
+  // var order = new Orders();
+
     console.log('chargeInfo****', charge);
 
     reply({charge:charge});

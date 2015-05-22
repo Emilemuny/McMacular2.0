@@ -3,8 +3,6 @@
 module.exports = [
   {method: 'get', path: '/{param*}', config: require('../routes/general/static')},
 
-  
-
   {method: 'post', path: '/vip', config: require('../routes/prelaunch/login')},
 
   {method: 'post', path: '/auth/signup', config: require('../routes/users/authentication/register')},
