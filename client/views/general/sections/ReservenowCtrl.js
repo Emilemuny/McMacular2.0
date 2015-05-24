@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mcmacular-app')
- .controller('reservenowCtrl', ['$scope', '$state', function($scope, $state){
+ .controller('reservenowCtrl', ['$scope', '$state', '$rootScope', function($scope, $state, $rootScope){
    $scope.activeItem = 'Select Fit';
 
    $scope.fits = ['Modern Slim', 'Classical Straight'];
@@ -56,21 +56,30 @@ angular.module('mcmacular-app')
 
      if((fitinfo === 'Select Fit') || (sizewaist === undefined) || (sizelength === undefined)){
        $scope.errorsizefit = 'PLEASE SELECT FIT,WAIST & LENGTH!';
-       console.log('Please Select Fit and Size');
      }else{
-       console.log('Youre good');
        $scope.errorsizefit = null;
        $('#myModal').modal('show');
      }
    };
    $scope.tocheckout = function(){
-     $('#myModal').modal('hide');
-     $('body').removeClass('modal-open');
-     $( '.modal-backdrop' ).remove();
-     $state.go('checkout');
+     if((!$rootScope.user) || ($rootScope.user === 'undefined')){
+       $rootScope.loggedin = true;
+       $rootScope.tocheckoutpage = true;
+     }else
+     {
+       $('#myModal').modal('hide');
+       $('body').removeClass('modal-open');
+       $( '.modal-backdrop' ).remove();
+       $state.go('checkout');
+     }
    };
+   $scope.progressData = [{
+       'fund': 'General',
+       'total': '300',
+       'remaining': '296',
+       'link': '#general'
+   }];
  }]);
-
  angular.module('mcmacular-app').directive('selectable', function () {
      return {
          restrict: 'A',

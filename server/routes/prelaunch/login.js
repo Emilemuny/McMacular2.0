@@ -16,7 +16,7 @@ module.exports = {
     var rpassword = Prelaunchuser.password;
 
     if((rusername === request.payload.username) && (rpassword === request.payload.password)){
-      reply({user:rusername}).code(200);
+      reply({vipuser:rusername}).code(200);
     }else{
       reply().code(400);
     }

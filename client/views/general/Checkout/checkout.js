@@ -26,7 +26,7 @@ angular.module('mcmacular-app')
   };
   $scope.handleStripe = function (code, result) {
     if (result.error) {
-
+      console.log('there has been an error', result.error);
       $scope.carderror = result.error.message;
     } else {
       $scope.tknid = result.id;
@@ -43,6 +43,9 @@ angular.module('mcmacular-app')
     Customer.chargecard(paymentinfo).then(function(response){
        $state.go('home');
       console.log('Charge response from server', response);
+
+
+
     });
   };
 

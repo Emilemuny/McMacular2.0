@@ -28,8 +28,36 @@ nav.navbar.navbar-default(ng-controller='NavCtrl')
               a(href='#section5', du-smooth-scroll='', du-scrollspy='', duration='2000') Contact us
         li.socialx.pull-right
           a.reserve(href='#section4', du-smooth-scroll='', du-scrollspy='', duration='2000') Reserve Now
-        li.pull-right(ng-hide='user')
-          a(ui-sref='login') Login
+        li.dropdown.pull-right(ng-controller='UsersCtrl')
+          a.dropdown-toggle(ng-hide='user', href='http://www.jquery2dotnet.com', data-toggle='dropdown')
+            | Sign in 
+            b.caret
+          ul.dropdown-menu.login(style='padding: 15px;min-width: 250px;')
+            li
+              .row
+                .col-md-12
+                  form#login-nav.form(role='form', accept-charset='UTF-8')
+                    .form-group
+                      label.sr-only(for='email') Email address
+                      input#exampleInputEmail2.form-control(ng-model='userinfo.email', type='email', placeholder='Email address', required='')
+                    .form-group(ng-show='name === "Register"')
+                      label(for='password1') Password
+                      input#password1.form-control(type='password', name='password1', ng-model='userinfo.password1')
+                    .form-group(ng-show='name === "Register"')
+                      label(for='password2') Confirm Password
+                      input#password2.form-control(type='password', name='password2', ng-model='userinfo.password2')
+                    .form-group(ng-show='name === "Login"')
+                      label.sr-only(for='password1') Password
+                      input#exampleInputPassword2.form-control(ng-model='userinfo.password', type='password', placeholder='Password', required='')
+                    .checkbox
+                      h5: a(ng-click='isregisteruser()') Don't have an account? Click here
+                    .form-group
+                      button.btn.btn-success.btn-block(ng-click='submit(userinfo)',type='submit') Sign in
+            li.divider
+            li
+              input#sign-in-facebook.btn.btn-primary.btn-block(ng-click='authenticate("facebook")', type='button', value='Sign In with Facebook')
+              input#sign-in-google.btn.btn-primary.btn-block(ng-click='authenticate("google")', type='button', value='Sign In with Google')
+              input#sign-in-twitter.btn.btn-primary.btn-block(ng-click='authenticate("twitter")', type='button', value='Sign In with Twitter')
         li.pull-right.dropdown(ng-show='user')
           a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
             | {{user.email || user.displayName}} 

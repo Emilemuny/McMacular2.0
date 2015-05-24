@@ -135,7 +135,6 @@ userSchema.methods.token = function(){
 userSchema.statics.register = function(o, cb){
   console.log('Object coming in****', o);
   User.findOne({email:o.email}, function(err, user){
-    console.log('Error in model', err);
     if(user){return cb(true);}
 
     user = new User(o);

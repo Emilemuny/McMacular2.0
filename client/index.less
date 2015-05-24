@@ -56,37 +56,7 @@ ul.nav.navbar-nav {
 
 //parallax images
 
-// new Nav css start
 
-// #bs-example-navbar-collapse-1 .reserve a {
-//   border: 1px solid #fff;
-//   background: #eb5b5b;
-//   color: #fff;
-//   border-radius: 10px;
-// }
-//
-//
-//
-// .navbar-default .navbar-nav>li>a {
-//   color: #333333;
-// }
-//
-// .navbar {
-//   width: 103%;
-//   margin-left: -17px;
-// }
-//
-//
-// .navbar-default .navbar-nav>li>a:hover {
-//   color: #eb5b5b;
-// }
-//
-// .reservebutton a {
-//   border: 1px solid grey;
-// }
-// .nav.navbar-nav {
-//   margin-left: 130px;
-// }
 
 // new Nav css end
 .pane {
@@ -106,8 +76,6 @@ ul.nav.navbar-nav {
   font-size: 1.125rem;
   text-align: center;
 
-  // -webkit-box-shadow: 0.25rem 0.25rem 0.3125rem rgba(0,0,0,0.5);
-  // box-shadow: 0.25rem 0.25rem 0.3125rem rgba(0,0,0,0.5);
 }
 #section1 {
   margin-top: -30px;
@@ -218,25 +186,83 @@ img.slidee {
     width: 64px;
     z-index: 5;
 }
-// .arrow.prev {
-//     background-image: url("./images/arrow-left.png");
-//
-//     left: 20px;
-//     opacity: 0.2;
-//     transition: all 0.2s linear 0s;
-// }
-// .arrow.next {
-//     background-image: url("./images/arrow-right.png");
-//     opacity: 0.2;
-//     right: 20px;
-//     transition: all 0.2s linear 0s;
-// }
-// .arrow.prev:hover{
-//     opacity:1;
-// }
-// .arrow.next:hover{
-//     opacity:1;
-// }
+
+//section4 progress bar
+
+.fund {
+background-color:rgba(0,0,0,.06);
+border-radius:4px;
+margin:0 0 4%;
+padding:2.5% 3.5%;
+}
+
+.fund:last-child {
+margin-bottom:4%;
+}
+
+.progress {
+background-color:#835454;
+border-radius:0px;
+box-shadow:0 1px 1px rgba(0,0,0,.15) inset;
+height:50px;
+margin-bottom:3%;
+overflow:hidden;
+}
+
+.bar {
+background-color:#eb5b5b;
+box-shadow:0 -1px 1px rgba(0,0,0,.15) inset;
+color:#fff;
+float:left;
+height:100%;
+position:relative;
+text-align:left;
+}
+
+.bar > .percent {
+font-size:2.9rem;
+left:8px;
+position:absolute;
+top:3px;
+}
+
+.goal {
+color: #333;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width:600px) {
+    h1 {
+    font-size:2rem;
+    margin:8% 0;
+    }
+
+    .fund {
+    margin:0 0 10%;
+    padding:5%;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    h1 {
+    font-size:1.4rem;
+    }
+
+    .donate {
+    display:block;
+    float:none;
+    margin-top:3%;
+    }
+}
+
+
+
+
+
+
+
 
 //section4 ruler and olympic
 
@@ -488,18 +514,26 @@ footer {
 }
 
 .accordion__tab button.btn {
-  background: #333;
+  background: #eb5b5b;
 }
 
-.accordion__tab.res button:hover {
-  background-color: #eb5b5b;
-}
 
 h4.res {
   color: #fff;
 }
 //fit and size reserve end.
 //Cart modal start
+
+//checkout login
+
+#modaldialog.modal-dialog.modal-dialog-center .modal-content.login .row {
+  margin: 61px;
+}
+
+
+
+
+
 
 #modalHeader.modal-header.modelHeaderBG {
   background-color: #333;
@@ -741,43 +775,7 @@ img{
     border-radius:0;
     height: 40px;
 }
-// #address .state_options label,
-// #address .country_options label.country{
-//   right: 0;
-//   margin-right: 0;
-//   width: 40%;
-//   top:5px;
-//   bottom:3px;
-//   background: #393B38;
-//   color: white;
-//   font-size: 1em;
-//   padding: 4px 6px;
-//   z-index: 2;
-//   text-transform: uppercase;
-// }
-// #address input[type="checkbox"]{
-//   width:10%;
-//   float:left;
-// }
-// #address label.same,
-// #address form input:focus + label.same{
-//   width:85%;
-//   float:left;
-//   margin-left:0;
-//   display:block;
-//   font-size:1em;
-//  padding:0;
-//   margin-bottom:15px;
-//  top:3px;
-//  right: 100%;
-//  margin-right:-100%;
-//  bottom: 0;
-//  background:transparent;
-//  color:initial;
-//  text-transform:uppercase;
-//  border-bottom-right-radius: 3px;
-//  border-top-right-radius: 3px;
-// }
+
 
 #billingaddress {
   margin-top: -50px;
@@ -1145,91 +1143,5 @@ button.buttonssx {
 img.aboutus {
   width: 100%;
 }
-
-//founders image hover effects
-figure.effect-zoe figcaption {
-	margin-top: 40px;
-	bottom: 0;
-	padding: 1em;
-	height: 3.75em;
-	background: #fff;
-	color: #3c4a50;
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,100%,0);
-	transform: translate3d(0,100%,0);
-}
-
-figure.effect-zoe h2 {
-	float: left;
-}
-
-figure.effect-zoe p.description {
-	position: absolute;
-	bottom: 12em;
-	padding: 2em;
-	color: #333333;
-	text-transform: none;
-	font-size: 100%;
-	opacity: 0;
-	-webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
-	-webkit-transition: opacity 0.35s;
-	transition: opacity 0.35s;
-	-webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
-}
-
-figure.effect-zoe h2{
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,200%,0);
-	transform: translate3d(0,200%,0);
-}
-
-
-
-figure.effect-zoe h2 {
-	display: inline-block;
-}
-
-figure.effect-zoe:hover p.description {
-	opacity: 1;
-}
-
-figure.effect-zoe:hover figcaption,
-figure.effect-zoe:hover h2,
-figure.effect-zoe:hover p.icon-links a {
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
-figure.effect-zoe:hover h2 {
-	-webkit-transition-delay: 0.05s;
-	transition-delay: 0.05s;
-}
-
-figure.effect-zoe:hover p.icon-links a:nth-child(3) {
-	-webkit-transition-delay: 0.1s;
-	transition-delay: 0.1s;
-}
-
-figure.effect-zoe:hover p.icon-links a:nth-child(2) {
-	-webkit-transition-delay: 0.15s;
-	transition-delay: 0.15s;
-}
-
-figure.effect-zoe:hover p.icon-links a:first-child {
-	-webkit-transition-delay: 0.2s;
-	transition-delay: 0.2s;
-}
-
-
-
-
-
-// #section5.container {
-//   margin-left: -15px;
-// }
-// invalid credit card info end
-
 
 // Checkout page END

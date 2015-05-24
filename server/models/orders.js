@@ -23,10 +23,11 @@ var ordersSchema = mongoose.Schema({
   products: {
     qty: Number,
     fitsize: String
-  }
+  },
+  ordersremaining: {type: Number, default: 300, required: true}
 });
 
-ordersSchema.statics.purchase = function(o, cb){
+ordersSchema.methods.purchase = function(o, cb){
   stripe.charges.create({
     amount: 271,
     currency: 'usd',
@@ -34,6 +35,8 @@ ordersSchema.statics.purchase = function(o, cb){
     description: o.info.name + ' Purchased a Macmacular product'
   }, function(err, charge){
     if(!err){
+
+      this.ordersremaining = this.ordersremaining --;
       // this.payment.transaction_id = charge.id;
       // this.payment.date = new Date();
       // this.shipping.customer = o.info.name;
@@ -45,7 +48,6 @@ ordersSchema.statics.purchase = function(o, cb){
     cb(err, charge);
   });
 };
-
 
 Orders = mongoose.model('Orders', ordersSchema);
 module.exports = Orders;

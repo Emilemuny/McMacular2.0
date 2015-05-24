@@ -13,10 +13,7 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
       .state('faq', {url:'/faq', templateUrl:'/views/general/faq.html'})
       .state('contact', {url:'/contact', templateUrl:'/views/general/contact.html'})
 
-      .state('checkout', {url:'/checkout', templateUrl: '/views/general/Checkout/checkout.html', controller:'CheckoutCtrl'})
-
-      .state('register', {url:'/register', templateUrl:'/views/users/users.html', controller:'UsersCtrl'})
-      .state('login', {url:'/login', templateUrl:'/views/users/users.html', controller:'UsersCtrl'});
+      .state('checkout', {url:'/checkout', templateUrl: '/views/general/Checkout/checkout.html', controller:'CheckoutCtrl'});
 
       $authProvider.facebook({clientId: '401463520025702'});
       $authProvider.google({clientId: '208332847084-1amt12mp8bpjk02f7l8101si9scacvat.apps.googleusercontent.com'});
@@ -31,12 +28,11 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
         scopeDelimiter: '+',
         authorizationEndpoint: 'https://api.instagram.com/oauth/authorize'
     });
-
-    window.Stripe.setPublishableKey('pk_live_JrhB22DdwVqybCz6316b4Cfy');
+    window.Stripe.setPublishableKey('pk_test_wEuQ5zyIDyS9J53v8SZq9MW8');
   }])
   .run(['$rootScope', '$window', '$auth', function($rootScope, $window, $auth){
     if($auth.isAuthenticated()){
-      $rootScope.user = JSON.parse($window.localStorage.user);
+      $rootScope.user = $window.localStorage.user;
     }
-    $rootScope.vipuser = $window.localStorage.vipuser;
+     $rootScope.vipuser = $window.localStorage.vipuser;
   }]);

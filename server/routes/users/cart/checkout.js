@@ -1,7 +1,6 @@
 'use strict';
 
 var Orders = require('../../../models/orders');
-
 module.exports = {
   auth: false,
   handler: function(request, reply){
@@ -10,14 +9,15 @@ module.exports = {
       console.log('error****',err);
       return reply().code(400);
       }
-
   // var order = new Orders();
-
+   var remaining;
+   Orders.find({}, function(err, order){
+     if(!err){
+      remaining = order.ordersremaining;
+     }
+   });
     console.log('chargeInfo****', charge);
-
-    reply({charge:charge});
+    reply({charge:charge, remaining:remaining});
   });
-
   }
-
 };

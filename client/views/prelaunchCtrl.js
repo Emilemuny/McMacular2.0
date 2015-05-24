@@ -6,19 +6,16 @@ angular.module('mcmacular-app')
       $state.go('home');
     }
     function login(response) {
-      console.log('USER', response);
-      $window.localStorage.vipuser = JSON.stringify(response.data.user);
+      $window.localStorage.vipuser = JSON.stringify(response.data.vipuser);
       $rootScope.vipuser = $window.localStorage.vipuser;
-      console.log('vipuser', $rootScope.vipuser);
-
       if ($rootScope.vipuser) {
         $state.go('home');
       } else {
         $location.path('prelaunch');
       }
     }
-    $scope.submit = function(user) {
-      vip.login(user)
+    $scope.submit = function(vipuser) {
+      vip.login(vipuser)
       .then(login);
     };
   }]);

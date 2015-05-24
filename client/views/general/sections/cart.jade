@@ -1,6 +1,31 @@
 #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
   #modaldialog.modal-dialog.modal-dialog-center
-    .modal-content
+    .modal-content.login(ng-controller='UsersCtrl', ng-if='loggedin')
+      .row
+        .col-md-12
+          h5 Please login to continue
+          form#login-nav.form(role='form', accept-charset='UTF-8')
+            .form-group
+              label.sr-only(for='email') Email address {{loggedin}}
+              input#exampleInputEmail2.form-control(ng-model='userinfo.email', type='email', placeholder='Email address', required='')
+            .form-group(ng-show='name === "Register"')
+              label(for='password1') Password
+              input#password1.form-control(type='password', name='password1', ng-model='userinfo.password1')
+            .form-group(ng-show='name === "Register"')
+              label(for='password2') Confirm Password
+              input#password2.form-control(type='password', name='password2', ng-model='userinfo.password2')
+            .form-group(ng-show='name === "Login"')
+              label.sr-only(for='password1') Password
+              input#password1.form-control(type='password', name='password', ng-model='userinfo.password')
+            .form-group
+              button.btn.btn-success.btn-block(ng-click='submit(userinfo)',type='submit') Sign in
+            .checkbox
+              h5: a(ng-click='isregisteruser()') Don't have an account? Click here
+              br
+              input#sign-in-facebook.btn.btn-primary.btn-block(ng-click='authenticate("facebook")', type='button', value='Sign In with Facebook')
+              input#sign-in-google.btn.btn-primary.btn-block(ng-click='authenticate("google")', type='button', value='Sign In with Google')
+              input#sign-in-twitter.btn.btn-primary.btn-block(ng-click='authenticate("twitter")', type='button', value='Sign In with Twitter')
+    .modal-content(ng-if='!loggedin')
       #checkoutModal
         #modalHeader.modal-header.modelHeaderBG
           button.close(type='button', data-dismiss='modal', aria-label='Close')
@@ -40,5 +65,4 @@
               span#spantotal.pull-right: h3 $271 
         #modalFooter.modal-footer
             button.btn.btn-default#closemodal(type='button', ng-click='tocheckout()') Continue to checkout
-          
       
