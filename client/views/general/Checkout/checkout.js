@@ -13,7 +13,8 @@ angular.module('mcmacular-app')
     }
     // $('.column.column1').css('background-color','#efefef');
     // $('.column.column1').css('opacity','0.2');
-
+    shipping.product = $rootScope.sizex;
+    console.log('shipping', shipping);
     Customer.saveshipping(shipping).then(function(response){
       console.log('Response**', response);
 
@@ -21,7 +22,6 @@ angular.module('mcmacular-app')
 
   };
   $scope.submitbilling = function(billing){
-    alert('Billing all good');
     $scope.billinginfo = billing;
   };
   $scope.handleStripe = function (code, result) {
@@ -38,15 +38,11 @@ angular.module('mcmacular-app')
     var moreinfo = ($scope.billinginfo === undefined) ? $scope.billing : $scope.billinginfo;
     var paymentinfo = {
        token: $scope.tknid,
-       info: moreinfo
+       info: moreinfo,
     };
     Customer.chargecard(paymentinfo).then(function(response){
        $state.go('home');
       console.log('Charge response from server', response);
-
-
-
     });
   };
-
 }]);

@@ -4,30 +4,33 @@
 
 var mongoose = require('mongoose');
 var stripe = require('stripe')(process.env.STRIPE_KEY);
-var Orders;
+var Order;
 
-
-var ordersSchema = mongoose.Schema({
-  customerId: String,
-  createdOn: {type: Date, default: Date.now, required: true},
-  shipping: {
-    customer: String,
-    address: String,
-    email: String,
-  },
+var orderSchema = mongoose.Schema({
+  userId: {type: mongoose.Schema.ObjectId, ref: 'User', required: true},
+  name: String,
+  lastname: String,
+  address: String,
+  city: String,
+  state: String,
+  zipcode: String,
+  country: String,
+  email: String,
+  product: String,
   payment:{
-    method: String,
-    transaction_id: Number,
+    Type: String,
+    transaction_id: String,
+    status: String,
+    paid: Boolean,
     date: {type: Date, default: Date.now}
   },
-  products: {
-    qty: Number,
-    fitsize: String
-  },
+  createdAt: {type: Date, default: Date.now, required: true},
   ordersremaining: {type: Number, default: 300, required: true}
 });
 
-ordersSchema.methods.purchase = function(o, cb){
+orderSchema.methods.purchase = function(o, cb){
+
+  console.log('Objects coming in model', o);
   stripe.charges.create({
     amount: 271,
     currency: 'usd',
@@ -36,18 +39,15 @@ ordersSchema.methods.purchase = function(o, cb){
   }, function(err, charge){
     if(!err){
 
-      this.ordersremaining = this.ordersremaining --;
+
+
       // this.payment.transaction_id = charge.id;
       // this.payment.date = new Date();
-      // this.shipping.customer = o.info.name;
-      // this.shipping.address = o.info.address + o.info.city + o.info.state + o.info.zipcode + o.info.country;
-      // this.shipping.email = o.info.email;
-
       console.log('No error');
     }
     cb(err, charge);
   });
 };
 
-Orders = mongoose.model('Orders', ordersSchema);
-module.exports = Orders;
+Order = mongoose.model('Order', orderSchema);
+module.exports = Order;

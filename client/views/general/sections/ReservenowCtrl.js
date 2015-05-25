@@ -72,11 +72,12 @@ angular.module('mcmacular-app')
        $( '.modal-backdrop' ).remove();
        $state.go('checkout');
      }
+     $rootScope.sizex = [$scope.activeItem, $scope.activesizewaist, $scope.activesizelen];
    };
    $scope.progressData = [{
        'fund': 'General',
        'total': '300',
-       'remaining': '296',
+       'remaining': '256',
        'link': '#general'
    }];
  }]);

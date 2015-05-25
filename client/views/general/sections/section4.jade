@@ -18,12 +18,12 @@
     .row
       .fund(ng-repeat='item in progressData')
         .progress
-          .bar(ng-style="{width:{{((item.remaining / item.total) * 100)}} + '%'}")
+          .bar(ng-style="{width:{{((item.remaining / item.total) * 100)}} + '%'}") 
             // show calculated percentage if total amount remaining is <= 100%
-            span.percent(ng-show='((item.remaining / item.tatal) * 100) <= 100') {{((item.remaining / item.total) * 100) | number:0}} %
+            span.percent(ng-show='((item.remaining / item.tatal) * 100) <= 100') {{((item.remaining / item.total) * 100) | number:0}} % 
             // show maximum percentage if total amount remaining is > 100%
             span.percent(ng-show='((item.remaining / item.total) * 100) > 100') 100%
-        h2.goal
+        h4.goal
           | {{item.remaining}} Pants remaining out of 300.
     .row
       .accordion__container
