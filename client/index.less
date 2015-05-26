@@ -13,9 +13,8 @@ html {
   background-color: white;
 }
 
-.parallax-container.homepage{
-  height: 567px;
-}
+
+
 
 .navbar-nav {
     width: 100%;
@@ -62,39 +61,6 @@ ul.nav.navbar-nav {
 
 //new Parallax;
 
-.parallax {
-  z-index: 0;
-  position: initial;
-}
-// .parallax-container.parallax img {
-//   max-weidth: 100%;
-// }
-// //parallax images
-//
-// .parallax-container {
-//   position: relative;
-//   overflow: hidden;
-//   height: 500px;
-//   width: 110%;
-//   margin-left: -45px;  }
-//
-// .parallax {
-//   position: initial;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   z-index: 0; }
-//   .parallax img {
-//     display: none;
-//     position: absolute;
-//     left: 50%;
-//     bottom: 0;
-//     min-width: 100%;
-//     min-height: 100%;
-//     -webkit-transform: translate3d(0, 0, 0);
-//     transform: translate3d(0, 0, 0);
-//     transform: translateX(-50%); }
 
 
 
@@ -246,12 +212,14 @@ margin-bottom:4%;
 }
 
 .progress {
-background-color:#835454;
-border-radius:0px;
-box-shadow:0 1px 1px rgba(0,0,0,.15) inset;
-height:20px;
-margin-bottom:3%;
-overflow:hidden;
+  position: relative;
+  height: 4px;
+  display: block;
+  width: 100%;
+  background-color: #acece6;
+  border-radius: 2px;
+  margin: 0.5rem 0 1rem 0;
+  overflow: hidden;
 }
 
 .bar {
@@ -415,6 +383,10 @@ color: #333;
   color: #eb5b5b;
 }
 
+img#founders {
+  position: fixed;
+}
+
 #section5.pane.contactus .container {
   margin-top: -155px;
 }
@@ -576,7 +548,7 @@ h4.res {
 //checkout login
 
 #modaldialog.modal-dialog.modal-dialog-center .modal-content.login .row {
-  margin: 61px;
+  margin: 15px;
 }
 
 
@@ -608,7 +580,11 @@ button#closemodal.btn.btn-default {
 }
 .modal {
   left: inherit;
-  top: inherit;
+  top: 0;
+  bottom: inherit;
+  max-height: 100%;
+  background-color: inherit;
+
 }
 .modal-content {
   height: 100vh;

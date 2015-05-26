@@ -2,7 +2,7 @@ div(ui-view)
   block content
     #sections
       .parallax-container.homepage
-        .parallax
+        .parallax(style='position: static')
           img(src='../../images/McMacular-homepage.jpg')
       section#section1.pane.homepage
         .wrapper
@@ -11,19 +11,19 @@ div(ui-view)
         .wrapper
           include ./sections/section2
       .parallax-container
-        .parallax
+        .parallax(style='position: static')
           img(src='../../images/user/product-images/golden-gate-background.jpg')      
       section#section3.pane.howitworks_reviews
         .wrapper
           include ./sections/section3
       .parallax-container
-        .parallax
+        .parallax(style='position: static')
           img(src='../../images/user/product-images/McMacular_3.jpg')      
       section#section4.pane.reserve
         .wrapper
           include ./sections/section4
       .parallax-container
-        .parallax
+        .parallax(style='position: static')
           img(src='../../images/user/product-images/cable_car.jpg')      
       section#section5.pane.contactus
         .wrapper
