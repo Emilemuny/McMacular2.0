@@ -23,6 +23,8 @@
     "satellizer": "~0.10.1",
     "stripe-angular": "~1.0.2",
     "angular-payments": "*",
-    "goalProgress": "*"
+    "goalProgress": "*",
+    "materialize": "~0.96.1",
+    "headroom.js": "~0.7.0"
   }
 }

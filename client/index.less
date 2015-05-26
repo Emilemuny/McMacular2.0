@@ -5,9 +5,11 @@ html,body{
    font-family: 'Raleway';
    font-weight: normal;
    }
+ max-width: 100%;
+ overflow-x: hidden;
+
 }
 html {
-  overflown-x: hidden;
   background-color: white;
 }
 .navbar-nav {
@@ -21,7 +23,6 @@ html {
       display: inline-block;
     }
   }
-
 img.navbar-brand {
   margin-top: -30px;
 }
@@ -54,7 +55,14 @@ ul.nav.navbar-nav {
   border-radius: 1px;
 }
 
+//new Parallax;
 
+.parallax {
+  z-index: 0;
+}
+.parallax-container.parallax img {
+  max-weidth: 100%;
+}
 //parallax images
 
 
@@ -79,13 +87,14 @@ ul.nav.navbar-nav {
 
 }
 #section1 {
-  margin-top: -30px;
-  background-image:url(./images/user/slider-img/McMacular-homepage.jpg);
-  background-size: cover;
+  // margin-top: -30px;
+  background-image:url(./images/mcmacular_inside.png);
+  // background-size: 180px 160px;
+  // background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
   position: relative;
-  right: 20px;
+  // right: 20px;
 
   // height: 100vh;
 }
@@ -161,6 +170,9 @@ blockquote {
 #section3 h4 {
   font-weight: 200;
 }
+.col-md-offset-4.col-md-12.reviews {
+  margin-left: -2px;
+}
 
 .rulerolymp img.ruler {
   height: 13vh;
@@ -175,18 +187,19 @@ h2.stepp  {
 //Gallery css
 img.slidee {
   height: 123%;
+  max-width: inherit;
 }
-.arrow {
-    cursor: pointer;
-    display: block;
-    height: 64px;
-    margin-top: -35px;
-    outline: medium none;
-    position: absolute;
-    top: 50%;
-    width: 64px;
-    z-index: 5;
-}
+// .arrow {
+//     cursor: pointer;
+//     display: block;
+//     height: 64px;
+//     margin-top: -35px;
+//     outline: medium none;
+//     position: absolute;
+//     top: 50%;
+//     width: 64px;
+//     z-index: 5;
+// }
 
 //section4 progress bar
 

@@ -1,43 +1,40 @@
 div(ui-view)
   block content
     #sections
+      .parallax-container
+        .parallax
+          img(src='../../images/McMacular-homepage.jpg')
       section#section1.pane.homepage
         .wrapper
           include ./sections/section1
       section#section2.pane.productdetails
         .wrapper
           include ./sections/section2
-      .img-holder(data-image='../../images/user/product-images/golden-gate-background.jpg', data-image-mobile='../../images/user/product-images/golden-gate-background.jpg', data-width='1024', data-height='679')
+      .parallax-container
+        .parallax
+          img(src='../../images/user/product-images/golden-gate-background.jpg')      
       section#section3.pane.howitworks_reviews
         .wrapper
           include ./sections/section3
-      .img-holder(data-image='../../images/user/product-images/McMacular_3.jpg', data-image-mobile='../../images/user/product-images/McMacular_3.jpg', data-width='819', data-height='604')
+      .parallax-container
+        .parallax
+          img(src='../../images/user/product-images/McMacular_3.jpg')      
       section#section4.pane.reserve
         .wrapper
           include ./sections/section4
-      .img-holder(data-image='../../images/user/product-images/cable_car.jpg', data-image-mobile='../../images/user/product-images/cable_car.jpg', data-width='819', data-height='616')
+      .parallax-container
+        .parallax
+          img(src='../../images/user/product-images/cable_car.jpg')      
       section#section5.pane.contactus
         .wrapper
           include ./sections/section5
       include ../../views/general/footer
-
       script(type="text/javascript").
         function initialize(){
-          $('.img-holder').imageScroll({
-            image: null,
-            imageAttribute: 'image',
-            container: $('body'),
-            windowObject: $(window),
-            speed:0.2,
-            coverRatio: 0.67,
-            holderMinHeight: 100,
-            holderMaxHeight: null,
-            extraHeight: 0,
-            mediaWidth: 1600,
-            mediaHeight: 900,
-            parallax: true,
-            touch: false,
-            imgClass: 'img-holder-img'
+          $(document).ready(function(){
+            $('.parallax').parallax();
           });
         }
         initialize();
+
+      

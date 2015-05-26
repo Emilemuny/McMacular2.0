@@ -17,9 +17,7 @@ angular.module('mcmacular-app')
     console.log('shipping', shipping);
     Customer.saveshipping(shipping).then(function(response){
       console.log('Response**', response);
-
     });
-
   };
   $scope.submitbilling = function(billing){
     $scope.billinginfo = billing;
