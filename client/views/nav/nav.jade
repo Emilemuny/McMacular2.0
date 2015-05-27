@@ -12,22 +12,22 @@ nav.navbar.navbar-default(ng-controller='NavCtrl')
         li.pull-left
           a(ui-sref='home'): img.navbar-brand(src='../../images/McMacular_Logo.jpg')
         li
-          a.hvr-underline-from-center(href='#section2', du-smooth-scroll='', du-scrollspy='', duration='2000') WHAT IT'S ALL ABOUT
+          a.hvr-underline-from-center(href='#section2', du-smooth-scroll='',  duration='2000') WHAT IT'S ALL ABOUT
         li
-          a.hvr-underline-from-center(href='#section3', du-smooth-scroll='', du-scrollspy='', duration='2000') HOW IT WORKS
+          a.hvr-underline-from-center(href='#section3', du-smooth-scroll='', duration='2000') HOW IT WORKS
         li.dropdown
           a.dropdown-toggle.hvr-underline-from-center(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
             | More 
             span.caret
           ul.dropdown-menu(role='menu')
             li
-              a(href='#section3', du-smooth-scroll='', du-scrollspy='', duration='2000') Reviews
+              a(href='#section3', du-smooth-scroll='', duration='2000') Reviews
             li
-              a(href='#section5', du-smooth-scroll='', du-scrollspy='', duration='2000') About us
+              a(href='#section5', du-smooth-scroll='', duration='2000') About us
             li
-              a(href='#section5', du-smooth-scroll='', du-scrollspy='', duration='2000') Contact us
+              a(href='#section5', du-smooth-scroll='', duration='2000') Contact us
         li.socialx.pull-right
-          a.reserve(href='#section4', du-smooth-scroll='', du-scrollspy='', duration='2000') Reserve Now
+          a.reserve(href='#section4', du-smooth-scroll='', duration='2000') Reserve Now
         li.dropdown.pull-right(ng-controller='UsersCtrl')
           a.dropdown-toggle(ng-hide='user', href='http://www.jquery2dotnet.com', data-toggle='dropdown')
             | Sign in 
@@ -67,3 +67,5 @@ nav.navbar.navbar-default(ng-controller='NavCtrl')
               a(href='#') Go to your cart
             li
               a(href='#', ng-click='logout()') Logout
+
+  

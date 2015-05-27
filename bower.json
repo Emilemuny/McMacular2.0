@@ -1,9 +1,9 @@
 {
-  "name": "angular-prototype",
+  "name": "McMacular",
   "version": "1.0.0",
-  "homepage": "https://github.com/coding-house-jan2015/angular-prototype",
+  "homepage": "https://github.com/mcmacular/McMacular2.0",
   "authors": [
-    "Chyld Medford <chyld.medford@gmail.com>"
+    "Emile Muny <emilemuny007@gmail.com>"
   ],
   "license": "MIT",
   "dependencies": {

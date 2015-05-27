@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAnimate', 'ngTouch', 'duScroll', 'angularPayments'])
+angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAnimate', 'ngTouch','duScroll', 'angularPayments'])
   .config(['$stateProvider', '$urlRouterProvider', '$authProvider', function($stateProvider, $urlRouterProvider, $authProvider){
 
     $urlRouterProvider.otherwise('/vip');
