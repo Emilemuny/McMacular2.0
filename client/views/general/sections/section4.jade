@@ -27,6 +27,12 @@
       .accordion__container
         .accordion__tab
           .accordion__tab-titlee(ng-click="openTab('tab one')")
+            a: h4
+          .accordion__tab-content
+            .row
+              a: h4 
+        .accordion__tab
+          .accordion__tab-titlee(ng-click="openTab('tab one')")
             a: h4(ng-model='activeItem')
               | {{activeItem}}
           .accordion__tab-content(ng-show="isOpenTab('tab one')") 
