@@ -3,11 +3,17 @@
 angular.module('mcmacular-app')
  .controller('reservenowCtrl', ['$scope', '$state', '$rootScope', function($scope, $state, $rootScope){
    $scope.activeItem = 'Select Fit';
+   $scope.activeItemc= 'Choose Color';
 
+   $scope.colors = ['Beige', 'Black', 'Charcoal'];
    $scope.fits = ['Modern Slim', 'Classical Straight'];
    $scope.sizees = {
      waist: ['28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '40'],
      lengthh: ['28','30', '32', '34', '36', '38']
+   };
+
+   $scope.setActiveItemc = function(val){
+     $scope.activeItemc = val;
    };
 
    $scope.setActiveItem = function(val){
@@ -53,9 +59,10 @@ angular.module('mcmacular-app')
      var fitinfo = $scope.activeItem;
      var sizewaist = $scope.activesizewaist;
      var sizelength = $scope.activesizelen;
+     var colorc = $scope.activeItemc;
 
-     if((fitinfo === 'Select Fit') || (sizewaist === undefined) || (sizelength === undefined)){
-       $scope.errorsizefit = 'PLEASE SELECT FIT,WAIST & LENGTH!';
+     if((fitinfo === 'Select Fit') || (sizewaist === undefined) || (sizelength === undefined) ||(colorc === 'Choose Color')){
+       $scope.errorsizefit = 'Select color, fit waist,length and size!';
      }else{
        $scope.errorsizefit = null;
        $('#myModal').modal('show');
@@ -72,14 +79,14 @@ angular.module('mcmacular-app')
        $( '.modal-backdrop' ).remove();
        $state.go('checkout');
      }
-     $rootScope.sizex = [$scope.activeItem, $scope.activesizewaist, $scope.activesizelen];
+     $rootScope.sizex = [$scope.activeItem, $scope.activesizewaist, $scope.activesizelen, $scope.activeItemc];
    };
    $scope.progressData = [{
        'fund': 'General',
        'total': '300',
        'remaining': '256',
        'link': '#general'
-   }];
+   }];   
  }]);
  angular.module('mcmacular-app').directive('selectable', function () {
      return {

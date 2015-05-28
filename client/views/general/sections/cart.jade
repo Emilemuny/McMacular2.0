@@ -1,5 +1,5 @@
 #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-  #modaldialog.modal-dialog.modal-dialog-center
+  .modal-dialog.modal-sm
     .modal-content.login(ng-controller='UsersCtrl', ng-if='loggedin')
       .row
         .col-md-12
@@ -42,6 +42,7 @@
               span.pull-left: h5 {{activesizewaist}}" x
               span.pull-left: h5  {{activesizelen}}"
               span.pull-left: h5 , {{activeItem}}
+              span.pull-left: h5  ,{{activeItemc}}
           #total.row.halfWhite(style='border-top:2px solid gray')
             b
               span.pull-left: h5 QTY

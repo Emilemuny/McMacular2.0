@@ -26,11 +26,12 @@
     .row
       .accordion__container
         .accordion__tab
-          .accordion__tab-titlee(ng-click="openTab('tab one')")
-            a: h4
-          .accordion__tab-content
-            .row
-              a: h4 
+          .accordion__tab-titlee(ng-click="openTab('tab three')")
+            a: h4(ng-model='activeItemc')
+              | {{activeItemc}}
+          .accordion__tab-content(ng-show="isOpenTab('tab three')")
+            .row(ng-repeat='color in colors',selectable='setActiveItemc(color)',ng-click="closeTab('tab three')")
+              a: h4 {{color}}
         .accordion__tab
           .accordion__tab-titlee(ng-click="openTab('tab one')")
             a: h4(ng-model='activeItem')
@@ -58,16 +59,19 @@
           include cart        
         .row.rulerolymp
           .col-md-4
-            img(src='../../images/olympic-img.png')
+            img.olympic(src='../../images/olympic-img.png')
             h5 Details            
-          .col-md-4
+          .col-md-4.modals
             img.ruler(src='../../images/ruler-img.png')
-            h5 Fit  
-                   
+            a(href='#', data-toggle='modal', data-target='.pop-up-1') Fit Guide
+            .modal.fade.pop-up-1(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel-1', aria-hidden='true')
+              .modal-dialog.modal-md
+                .modal-content
+                  .modal-header
+                    button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                    h4#myLargeModalLabel-1.modal-title Fit Guide
+                  .modal-body
+                    img.img-responsive.img-rounded.center-block(src='../../images/fit_guide.jpg', alt='')
+                  
                       
-                
             
-            
-            
-        
-    
