@@ -10,7 +10,7 @@ angular.module('mcmacular-app', ['ui.router', 'satellizer', 'ngMessages', 'ngAni
       .state('prelaunch',{url:'/vip', templateUrl: '/views/prelaunch.html', controller: 'prelaunchCtrl'})
 
       .state('home', {url:'/home', templateUrl:'/views/general/home.html'})
-      .state('faq', {url:'/faq', templateUrl:'/views/general/faq.html'})
+      .state('about', {url:'/about', templateUrl:'/views/general/about.html'})
       .state('contact', {url:'/contact', templateUrl:'/views/general/contact.html'})
 
       .state('checkout', {url:'/checkout', templateUrl: '/views/general/Checkout/checkout.html', controller:'CheckoutCtrl'});

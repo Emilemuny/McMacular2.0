@@ -35,14 +35,11 @@ orderSchema.methods.purchase = function(o, cb){
     amount: 271,
     currency: 'usd',
     source: o.token,
-    description: o.info.name + ' Purchased a Macmacular product'
+    description: o.info.name + ' Purchased a Macmacular product',
+    receipt_email: o.info.email
   }, function(err, charge){
     if(!err){
 
-
-
-      // this.payment.transaction_id = charge.id;
-      // this.payment.date = new Date();
       console.log('No error');
     }
     cb(err, charge);

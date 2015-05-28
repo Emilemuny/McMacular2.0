@@ -4,11 +4,33 @@ angular.module('mcmacular-app')
  .controller('imagegalleryCtrl', ['$scope', function($scope){
 
    $scope.photos = [
-     {src: '../../images/McMacular-frontview.jpg', desc: 'McMacular front-view'},
+     {src: '../../images/McMacular-frontview.jpg', desc: 'McMacular front-view beige'},
+
+     {src:'../../images/user/product-images/side-view/two-feet-horizontal-distant_black.jpg', desc:'McMacular black '},
+
      {src:'../../images/McMacular-backview.jpg', desc: 'McMacular back-view'},
+
+     {src:'../../images/user/product-images/Front-Tapered-Fit/front-tapered_charcoal.jpg', desc:'McMacular charchoal'},
+
      {src:'../../images/McMacular-sideview.jpg', desc: 'McMacular side-view'},
-     {src:'../../images/McMacular-two-feet_beige.jpg', desc: 'McMacular side-view'}
-   ];
+
+     {src:'../../images/user/product-images/side-view/two-feet-horizontal-distant_black.jpg', desc:'McMacular black'},
+
+     {src:'../../images/McMacular-two-feet_beige.jpg', desc: 'McMacular side-view'},
+
+     {src:'../../images/user/product-images/Pants-Backside/pants-back_charcoal.jpg', desc:'McMacular charcoal'}
+
+    //  {src:'../../images/', desc:'McMacular '},
+     //
+    //  {src:'../../images/', desc:'McMacular '},
+     //
+    //  {src:'../../images/', desc:'McMacular '},
+     //
+    //  {src:'../../images/', desc:'McMacular '},
+
+
+
+  ];
 
    $scope._Index = 0;
    $scope.isActive = function(index){

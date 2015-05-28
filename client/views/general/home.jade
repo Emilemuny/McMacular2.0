@@ -1,9 +1,9 @@
 div(ui-view)
   block content
+    .parallax-container.homepage
+      .parallax
+        img(src='../../images/McMacular-homepage.jpg')
     #sections
-      .parallax-container.homepage
-        .parallax(style='position: static')
-          img(src='../../images/McMacular-homepage.jpg')
       section#section1.pane
         .wrapper
           include ./sections/section1
@@ -34,9 +34,6 @@ div(ui-view)
           $(document).ready(function(){
             $('.parallax').parallax();
           });
-          //- $(document).ready(function(){
-          //-     $('.scrollspy').scrollSpy();
-          //-   });
         }
         initialize();
 

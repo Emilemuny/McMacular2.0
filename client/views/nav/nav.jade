@@ -1,6 +1,5 @@
 nav.navbar.navbar-default(ng-controller='NavCtrl')
   .container-fluid.nav
-    // Brand and toggle get grouped for better mobile display
     .navbar-header
       button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
         span.sr-only Toggle navigation
@@ -10,7 +9,7 @@ nav.navbar.navbar-default(ng-controller='NavCtrl')
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
         li.pull-left
-          a(ui-sref='home'): img.navbar-brand(src='../../images/McMacular_Logo.jpg')
+          a(ui-sref='home'): img.navbar-brand#logo(src='../../images/McMacular_Logo.jpg')
         li
           a.hvr-underline-from-center(href='#section2', du-smooth-scroll='',  duration='2000') WHAT IT'S ALL ABOUT
         li
@@ -23,11 +22,11 @@ nav.navbar.navbar-default(ng-controller='NavCtrl')
             li
               a(href='#section3', du-smooth-scroll='', duration='2000') Reviews
             li
-              a(href='#section5', du-smooth-scroll='', duration='2000') About us
+              a(ui-sref='about') About us
             li
-              a(href='#section5', du-smooth-scroll='', duration='2000') Contact us
+              a(ui-sref='contact') Contact us
         li.socialx.pull-right
-          a.reserve(href='#section4', du-smooth-scroll='', duration='2000') Reserve Now
+          a.reserve(href='#section4', du-smooth-scroll='', duration='2000') Pre-order
         li.dropdown.pull-right(ng-controller='UsersCtrl')
           a.dropdown-toggle(ng-hide='user', href='http://www.jquery2dotnet.com', data-toggle='dropdown')
             | Sign in 

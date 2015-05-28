@@ -1,12 +1,9 @@
 .container-fluid
-  .row.pull-left
-    .col-md-6
-      figure.effect-zoe
-        img#founders(src='../../images/McMacular_founders.jpg', alt='img25', style='height: 50% width: 50%')
-    .col-md-6
-      .row
-        button.hvr-shutter-out-horizontal.buttonssx About us
-      .row  
-        button.hvr-shutter-out-horizontal.buttonssx Contact us
-
-    
+  .row
+    .col-lg-6.col-sm-6.col-xs-12
+      a(href='#')
+        img.thumbnail.img-responsive(src='../../images/McMacular_founders.jpg')
+    .col-lg-6.col-sm-6.col-xs-12
+        button(ui-sref='about').hvr-shutter-out-horizontal.buttonssx About us
+        button(ui-sref='contact').hvr-shutter-out-horizontal.buttonssx Contact us
+  

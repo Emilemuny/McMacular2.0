@@ -1,1 +1,29 @@
-h1 Contact
+section#contact.contact
+ .container
+    .row
+      .col-md-12
+        h2
+          | Holla at McMacular 
+          small we'll get back to ya ASAP.
+          i.fa.fa-paper-plane-o
+    #map-canvas
+    .row
+      form#contactform(method='post', action='contact.php', name='contactform')
+        .col-md-6
+          fieldset
+            input#name(name='name', type='text', size='30', placeholder='Name')
+            br
+            input#email(name='email', type='text', size='30', placeholder='Email')
+            br
+            input#phone(name='phone', type='text', size='30', placeholder='Phone')
+            br
+            input#human(name='human', type='text', size='30', placeholder='Prove your not a robot... What is 2+2?')
+            br
+        .col-md-6
+          fieldset
+            textarea#comments(name='comments', cols='40', rows='20', placeholder='Message')
+        .col-md-12
+          fieldset
+            button#submit.btn.btn-lg(type='submit', value='Submit') Send Message
+// Google Maps API
+script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDnycWatbGyK6ldFqErjFtko1yeMclNUOA&sensor=true')
