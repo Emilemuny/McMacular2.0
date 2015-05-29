@@ -1,8 +1,8 @@
 div(ui-view)
   block content
-    .parallax-container.homepage
+    .parallax-container.homepage    
       .parallax
-        img(src='../../images/McMacular-homepage.jpg')
+        img.home(src='../../images/McMacular-homepage.jpg', style="display: block; transform: translate3d(-50%, 0px, 0px);")
     #sections
       section#section1.pane
         .wrapper
@@ -11,20 +11,20 @@ div(ui-view)
         .wrapper
           include ./sections/section2
       .parallax-container
-        .parallax(style='position: static')
-          img(src='../../images/user/product-images/golden-gate-background.jpg')      
+        .parallax
+          img(src='../../images/user/product-images/golden-gate-background.jpg', style="height:30% width:30%")      
       section#section3.pane.howitworks_reviews
         .wrapper
           include ./sections/section3
       .parallax-container
-        .parallax(style='position: static')
-          img(src='../../images/user/product-images/McMacular_3.jpg')      
+        .parallax
+          img(src='../../images/user/product-images/McMacular_3.jpg', style="height:30% width:30%")      
       section#section4.pane.reserve
         .wrapper
           include ./sections/section4
       .parallax-container
-        .parallax(style='position: static')
-          img(src='../../images/user/product-images/cable_car.jpg')      
+        .parallax
+          img(src='../../images/user/product-images/cable_car.jpg', style="height:30% width:30%")      
       section#section5.pane.contactus
         .wrapper
           include ./sections/section5

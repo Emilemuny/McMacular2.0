@@ -2,7 +2,7 @@
 //
 // 'use strict';
 //
-// var sendgrid = require('sendgrid')(process.env.sendgrid_user, process.env.sendgrid_pwd);
+// var sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PWD);
 //
 //
 // var email = new sendgrid.Email({

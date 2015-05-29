@@ -7,31 +7,30 @@ html,body{
    }
  max-width: 100%;
  overflow-x: hidden;
-
 }
 html {
   background-color: white;
 }
-
-
 .parallax-container.homepage {
-
   background-size:100px 150px;
-
   position: relative;
   overflow: hidden;
-  height: 690px;
+  height: 790px;
   background-size: cover;
-  top: 0px;
 }
-
+.parallax-container.homepage.parallax img{
+  transform: translate3d(-50%, 500px, 0px);
+}
+.parallax img.home{
+  bottom: 323px;
+}
 .parallax-container {
+  background-attachment: fixed;
   position: relative;
   overflow: hidden;
   height: 500px;
   width: 110%;
   margin-left: -45px;  }
-
 .parallax {
   position: initial;
   top: 0;
@@ -50,19 +49,12 @@ html {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     transform: translateX(-50%); }
-
-
 .fixed {
 	position: fixed;
 	top: 0;
 	height: 70px;
 	z-index: 1;
 }
-
-// .navbar {
-//   position: absolute;
-// }
-
 nav {
 position: absolute;
   bottom: 0;
@@ -70,9 +62,6 @@ position: absolute;
   height: 70px;
   background: #fff;
 }
-
-
-
 .navbar-nav {
     width: 100%;
     text-align: center;
@@ -137,12 +126,14 @@ img.navbar-brand {
 
 }
 #section1 {
-  background-image:url(./images/mcmacular_inside.png);
+  background-image:url(./images/its-whats-inside.jpg);
   background-repeat:no-repeat;
   background-position: center;
   position: relative;
   background-attachment: fixed;
 }
+
+
 
 section#section1.pane.homepage.wrapper {
   margin-right: 40px;
@@ -208,8 +199,9 @@ blockquote {
   border-left: 0px;
   text-align: -webkit-left;
 }
-//Section 3 carousel
 
+
+//Section 3 carousel
 #section3 h4 {
   font-weight: 200;
 }
