@@ -11,7 +11,7 @@
   .col-md-6(ng-controller='reservenowCtrl')
     .row
       h1 McMacular 2.0
-      h3  - Champange collection -
+      h4 Premium silk-lined pants made in San Francisco
       h2  $ 237
     .row
       .fund(ng-repeat='item in progressData')
@@ -58,10 +58,18 @@
         #modalcarthere
           include cart        
         .row.rulerolymp
-          .col-md-4
-            //- img.img-responsive.olympic(src='../../images/olympic-img.png')
-            //- h5 Details            
-          .col-md-4.modals
+          .col-md-4.col-xs-2.modals
+            img.img-responsive.olympic(src='../../images/olympic-img.png')
+            a(href='#', data-toggle='modal', data-target='.pop-up-2') Hidden details
+            .modal.fade.pop-up-2(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel-1', aria-hidden='true')
+              .modal-dialog.modal-lg
+                .modal-content
+                  .modal-header
+                    button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                    h4#myLargeModalLabel-1.modal-title Fit Guide
+                  .modal-body
+                    img.img-responsive.img-rounded.center-block(src='../../images/details.png', alt='')
+          .col-md-4.col-xs-2.modals
             img.img-responsive.ruler(src='../../images/ruler-img.png')
             a(href='#', data-toggle='modal', data-target='.pop-up-1') Fit Guide
             .modal.fade.pop-up-1(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel-1', aria-hidden='true')
