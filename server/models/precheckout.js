@@ -11,7 +11,6 @@ var precheckoutinfoSchema = mongoose.Schema({
   address: String,
   productinfo: String,
   createdAt: {type: Date, default: Date.now, required: true}
-
 });
 
 Precheckoutinfo = mongoose.model('Precheckoutinfo', precheckoutinfoSchema);

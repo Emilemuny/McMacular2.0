@@ -1,29 +1,27 @@
 section#contact.contact
  .container
-    .row
-      .col-md-12
-        h2
-          | Holla at McMacular 
-          small we'll get back to ya ASAP.
-          i.fa.fa-paper-plane-o
-    #map-canvas
-    .row
-      form#contactform(method='post', action='contact.php', name='contactform')
-        .col-md-6
-          fieldset
-            input#name(name='name', type='text', size='30', placeholder='Name')
-            br
-            input#email(name='email', type='text', size='30', placeholder='Email')
-            br
-            input#phone(name='phone', type='text', size='30', placeholder='Phone')
-            br
-            input#human(name='human', type='text', size='30', placeholder='Prove your not a robot... What is 2+2?')
-            br
-        .col-md-6
-          fieldset
-            textarea#comments(name='comments', cols='40', rows='20', placeholder='Message')
-        .col-md-12
-          fieldset
-            button#submit.btn.btn-lg(type='submit', value='Submit') Send Message
-// Google Maps API
-script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDnycWatbGyK6ldFqErjFtko1yeMclNUOA&sensor=true')
+   .col-md-6.col-md-offset-3
+     .row
+       h4 Question? Suggestion? Just Chat?
+       img(src='../../images/contact-banner.jpg')
+     .row
+       p If you have any questions or concerns, the fastest way possible to get 
+        | a response is to post a comment on our Facebook page or tweet your question to @mcmacular.   
+       br
+       p Otherwise, feel free to give us a call at (415) 716-1862 or send one of us an email:
+         a(href='tel:+14157161862')  
+     .row
+       .col-xs-4
+         a(href='#')
+           img.thumbnail.img-responsive(src='../../images/Casey.D_founder_mcmacular.jpg') 
+           h6 Casey Davis 
+           h6 Founder.
+           h6 
+              a(href='mailto:casey@mcmacular.com') Casey@mcmacular.com   
+       .col-xs-4
+         a(href='#')
+           img.thumbnail.img-responsive(src='../../images/Taylor.D_founder_mcmacular.jpg')
+           h6 Taylor Danges, 
+           h6 Co-founder.
+           h6 
+             a(href='mailto:tj@mcmacular.com') tj@mcmacular.com

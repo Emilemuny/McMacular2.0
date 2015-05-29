@@ -32,7 +32,7 @@ orderSchema.methods.purchase = function(o, cb){
 
   console.log('Objects coming in model', o);
   stripe.charges.create({
-    amount: 271,
+    amount: 237,
     currency: 'usd',
     source: o.token,
     description: o.info.name + ' Purchased a Macmacular product',

@@ -12,7 +12,7 @@
     .row
       h1 McMacular 2.0
       h3  - Champange collection -
-      h2  $ 271
+      h2  $ 237
     .row
       .fund(ng-repeat='item in progressData')
         .progress
@@ -21,8 +21,8 @@
             span.percent(ng-show='((item.remaining / item.tatal) * 100) <= 100') {{((item.remaining / item.total) * 100) | number:0}} % 
             // show maximum percentage if total amount remaining is > 100%
             span.percent(ng-show='((item.remaining / item.total) * 100) > 100') 100%
-        h4.goal
-          | {{item.remaining}} Pants remaining out of 300.
+        //- h4.goal
+        //-   | {{item.remaining}} Pants remaining out of 300.
     .row
       .accordion__container
         .accordion__tab
